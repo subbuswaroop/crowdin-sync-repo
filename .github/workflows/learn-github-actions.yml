@@ -15,6 +15,6 @@ jobs:
           upload_translations: true
           download_translations: false
         env:
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CROWDIN_PROJECT_ID: 478453
           CROWDIN_PERSONAL_TOKEN: c4e71e7d723f4ba42ddbf4f2222b055c23a097ded21b593dd0a9c121a68ad701e719ea7af1a44cae
