@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: dumy workflow
 on:
   push:
     branches:
