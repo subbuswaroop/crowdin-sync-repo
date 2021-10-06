@@ -10,7 +10,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0
           token: ${{ secrets.PRIVATE_TOKEN }}
 
       - name: Get changed files
