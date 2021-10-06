@@ -1,5 +1,7 @@
 name: dumy workflow
-on: [push]
+on:
+  push:
+    branches: [ main ]
 jobs:
   dummy-workflow:
     runs-on: ubuntu-latest
