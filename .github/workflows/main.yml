@@ -25,6 +25,7 @@ jobs:
           upload_translations: false
           download_translations: true
           push_translations: true
+          localization_branch_name: 'translations_branch'
         env:
           GITHUB_TOKEN: ${{ secrets.PRIVATE_TOKEN }}
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
