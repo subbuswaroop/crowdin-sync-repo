@@ -19,7 +19,7 @@ jobs:
         uses: tj-actions/changed-files@v10
 
       - name: crowdin action
-        uses: crowdin/github-action@1.0.4
+        uses: crowdin/github-action@1.4.0
         with:
           upload_sources: true
           download_translations: true
