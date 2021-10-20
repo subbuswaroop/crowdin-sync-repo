@@ -41,8 +41,7 @@ jobs:
        
       - name: List all strings
         run: |
-          outputvar='${{ steps.strings-list.outputs.output }}' | jq '.data'
-          echo "$outputvar"
+          echo '${{ steps.strings-list.outputs.output }}' | jq '.data'
 #          outputVar='${{ steps.strings-list.outputs.output }}' | jq '.data'
 #          echo "$outputVar"
 #       - name: List all modified files
