@@ -4,6 +4,8 @@ on:
     branches: [ main ]
     paths:
     - 'locales-json/en.json'
+  
+  workflow_dispatch:
 
 jobs:
   dummy-workflow:
