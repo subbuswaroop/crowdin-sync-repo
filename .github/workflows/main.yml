@@ -43,7 +43,7 @@ jobs:
         id: vars
         run: echo ::set-output name=outputvar::$(echo '${{ steps.strings-list.outputs.output }}' | jq '.url')
       - name: Print data
-        run: echo "${{ steps.vars.outputs.outputvar }}"
+        run: echo ${{ steps.vars.outputs.outputvar }}
        
 #       - name: List all strings
 #         run: |
