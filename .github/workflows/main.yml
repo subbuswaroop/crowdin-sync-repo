@@ -41,7 +41,8 @@ jobs:
        
       - name: List all strings
         run: |
-          echo ${{ toJSON(steps.strings-list.outputs.output["url"]) }}
+          output = ${{ steps.strings-list.outputs.output }}
+          echo (jq '.url' $output)
         
 #       - name: List all modified files
 #         run: |
