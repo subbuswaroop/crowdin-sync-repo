@@ -39,8 +39,9 @@ jobs:
           headers: '{"Authorization": "Bearer ${{ secrets.CROWDIN_PERSONAL_TOKEN }}"}'
        
       - name: List all strings
+        id: strings-list
         run: |
-          echo ${{ steps }} | ConvertFrom-Json
+          echo ${{ steps.strings-list.outputs }}
         
 #       - name: List all modified files
 #         run: |
