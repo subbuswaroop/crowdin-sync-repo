@@ -41,7 +41,7 @@ jobs:
        
       - name: List all strings
         run: |
-          echo ${{ toJSON(steps.strings-list.outputs.output.data) }}
+          echo ${{ toJSON(steps.strings-list.outputs.output) }}
         
 #       - name: List all modified files
 #         run: |
