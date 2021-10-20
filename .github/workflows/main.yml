@@ -38,11 +38,17 @@ jobs:
           url: https://api.crowdin.com/api/v2/projects/480641/strings
           method: GET
           headers: '{"Authorization": "Bearer ${{ secrets.CROWDIN_PERSONAL_TOKEN }}"}'
+
+      - name: Get data
+        id: vars
+        run: echo ::set-output name=outputvar::$(echo '${{ steps.strings-list.outputs.output }}' | jq '.data')
+      - name: Print data
+        run: echo "${{ steps.vars.outputs.outputvar }}"
        
-      - name: List all strings
-        run: |
-          OUTPUTTEST=('${{ steps.strings-list.outputs.output }}' | jq '.data')
-          echo "$OUTPUTTEST"
+#       - name: List all strings
+#         run: |
+#           OUTPUTTEST=('${{ steps.strings-list.outputs.output }}' | jq '.data')
+#           echo "$OUTPUTTEST"
 #          outputVar='${{ steps.strings-list.outputs.output }}' | jq '.data'
 #          echo "$outputVar"
 #       - name: List all modified files
