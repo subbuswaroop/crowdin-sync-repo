@@ -40,7 +40,8 @@ jobs:
        
       - name: List all strings
         run: |
-          echo "${{steps.webhooks.outputs}}"
+          $output = '${{ steps.webhooks.outputs.output }}'
+          echo $output.data
         
 #       - name: List all modified files
 #         run: |
