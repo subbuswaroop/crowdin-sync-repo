@@ -43,7 +43,7 @@ jobs:
         run: |
           $outputvar = '${{ steps.strings-list.outputs.output }}' | jq '.data'
           echo $outputvar
-#          $outputVar='${{ steps.strings-list.outputs.output }}' | jq '.data'
+#          outputVar='${{ steps.strings-list.outputs.output }}' | jq '.data'
 #          echo "$outputVar"
 #       - name: List all modified files
 #         run: |
