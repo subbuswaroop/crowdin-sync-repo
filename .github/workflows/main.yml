@@ -40,7 +40,7 @@ jobs:
        
       - name: List all strings
         run: |
-          echo ${{ steps }}
+          echo ${{ steps }} | ConvertFrom-Json
         
 #       - name: List all modified files
 #         run: |
