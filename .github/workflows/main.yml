@@ -41,8 +41,8 @@ jobs:
        
       - name: List all strings
         run: |
-          $output=${{ steps.strings-list.outputs.output }}
-          echo '${{ $output }} ' | jq '.url'
+          outputVar = '${{ steps.strings-list.outputs.output }}' | jq '.url'
+          echo $outputVar
 #       - name: List all modified files
 #         run: |
 #           for file in "${{ steps.changed-files.outputs.all_modified_files }}"; do
