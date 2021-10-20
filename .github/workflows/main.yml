@@ -41,6 +41,8 @@ jobs:
        
       - name: List all strings
         run: |
+          OUTPUTTEST="test"
+          echo "$OUTPUTTEST"
           echo '${{ steps.strings-list.outputs.output }}' | jq '.data'
 #          outputVar='${{ steps.strings-list.outputs.output }}' | jq '.data'
 #          echo "$outputVar"
