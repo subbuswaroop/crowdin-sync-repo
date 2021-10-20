@@ -32,6 +32,7 @@ jobs:
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
           
       - name: Get All Strings
+        id: strings-list
         uses: satak/webrequest-action@master
         with:
           url: https://api.crowdin.com/api/v2/projects/480641/strings
@@ -39,7 +40,6 @@ jobs:
           headers: '{"Authorization": "Bearer ${{ secrets.CROWDIN_PERSONAL_TOKEN }}"}'
        
       - name: List all strings
-        id: strings-list
         run: |
           echo ${{ steps.strings-list.outputs }}
         
