@@ -41,8 +41,9 @@ jobs:
        
       - name: List all strings
         run: |
-          output = ${{ steps.strings-list.outputs.output }}
-          echo $output        
+          echo {{ '{ "foo": 123, "bar": 456 }' | jq '.foo' }}
+#          output = ${{ steps.strings-list.outputs.output }}
+#          echo $output        
 #       - name: List all modified files
 #         run: |
 #           for file in "${{ steps.changed-files.outputs.all_modified_files }}"; do
