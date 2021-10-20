@@ -34,6 +34,7 @@ jobs:
         with:
           url: https://api.crowdin.com/api/v2/projects/480641/strings
           method: GET
+          headers: '{"Authorization": "Bearer ${{ secrets.CROWDIN_PERSONAL_TOKEN }}"}'
        
       - name: List all strings
         run: |
