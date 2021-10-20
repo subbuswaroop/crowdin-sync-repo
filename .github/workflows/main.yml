@@ -28,6 +28,16 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+          
+      - name: Get All Strings
+        uses: satak/webrequest-action@master
+        with:
+          url: https://api.crowdin.com/api/v2/projects/480641/strings
+          method: GET
+       
+      - name: List all strings
+        run: |
+          echo "${{steps.webhooks.outputs.output}}"
         
 #       - name: List all modified files
 #         run: |
