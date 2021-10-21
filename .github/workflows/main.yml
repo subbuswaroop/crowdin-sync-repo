@@ -43,7 +43,9 @@ jobs:
         id: vars
         run: echo ::set-output name=outputvar::$(echo '${{ steps.strings-list.outputs.output }}' | jq '.data.data')
       - name: Print data
-        run: echo ${{ steps.vars.outputs.outputvar }}
+        run: |
+          echo "${{GITHUB_SHA}}"
+          echo ${{ steps.vars.outputs.outputvar }}
        
 #       - name: List all strings
 #         run: |
