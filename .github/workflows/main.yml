@@ -37,7 +37,9 @@ jobs:
       - name: Check SHA
         run: |
           git_hash=$(git rev-parse --short "$GITHUB_SHA")
+          git_before_hash="${{ github.event.before }}"
           echo "$git_hash"
+          echo "$git_before_hash"
           #echo ${{ steps.commit-sha.outputs.sha_short }}
           
       - name: Get All Strings
