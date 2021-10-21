@@ -11,5 +11,6 @@
     "fd.forums":"Forums",
     "fd.portal":"Portal",
     "fd.forum":"Forum",
-    "fd.outbound_email":"Outbound Email"
+    "fd.outbound_email":"Outbound Email",
+    "common.copy.success": "Copied!"
 }
