@@ -20,5 +20,5 @@ jobs:
         uses: mikefarah/yq@v4.13.5
         
       - name: Print yaml key
-        run: cat locales-json/en.yaml | yq e '.a.b[0].c'
+        run: cat locales-json/en.yaml | yq e '.en.time.am'
 #         run: echo {{ yq e '.en.time.am' locales-json/en.yaml }}
