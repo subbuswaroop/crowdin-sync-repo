@@ -1,15 +1,14 @@
 {
-    "testdup": "testdup",
-    "test12": "test1",
-    "test2": "test4",
-    "test3": "test32",
-    "test4": "test34",
-    "test5": "testaasdad",
-    "test6": "test6asdas",
-    "test43": "test343asdadasdads",
-    "test32322": "tesopaodasdas",
-    "asdasdasd": "asdadads",
-    "Another": "Anotherone",
-    "newone": "newone",
-    "newone1": "newone1"
+    "fd.categories": "categories",
+    "fd.helpdesk":"Helpdesk",
+    "fd.customers":"Contacts",
+    "fd.dashboard":"Dashboard",
+    "fd.tickets":"Tickets",
+    "fd.click_here":"Click here",
+    "fd.emoji": "Emoji",
+    "fd.seconds": "Seconds",
+    "fd.social":"Social",
+    "fd.forums":"Forums",
+    "fd.portal":"Portal",
+    "fd.forum":"Forum"
 }
