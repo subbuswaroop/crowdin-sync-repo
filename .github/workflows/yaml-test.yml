@@ -20,5 +20,6 @@ jobs:
         uses: mikefarah/yq@v4.13.5
         
       - name: Print yaml key
-        run: cat ../locales-yml/test.yaml | yq e '.en.time.am'
+        working-directory: locales-yml
+        run: cat test.yaml | yq e '.en.time.am'
 #         run: echo {{ yq e '.en.time.am' ../locales-json/en.yaml }}
