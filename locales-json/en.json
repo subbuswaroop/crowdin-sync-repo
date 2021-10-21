@@ -10,5 +10,6 @@
     "fd.social":"Social",
     "fd.forums":"Forums",
     "fd.portal":"Portal",
-    "fd.forum":"Forum"
+    "fd.forum":"Forum",
+    "fd.outbound_email":"Outbound Email"
 }
