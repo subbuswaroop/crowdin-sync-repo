@@ -31,6 +31,12 @@ jobs:
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
           
+      - name: Set SHA
+        id: commit-sha
+        run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+      - name: Check SHA
+        run: echo ${{ steps.commit-sha.outputs.sha_short }}
+          
       - name: Get All Strings
         id: strings-list
         uses: satak/webrequest-action@master
@@ -44,7 +50,6 @@ jobs:
         run: echo ::set-output name=outputvar::$(echo '${{ steps.strings-list.outputs.output }}' | jq '.data.data')
       - name: Print data
         run: |
-          echo "${{GITHUB_SHA}}"
           echo ${{ steps.vars.outputs.outputvar }}
        
 #       - name: List all strings
