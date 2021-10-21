@@ -1,0 +1,10 @@
+en:
+  time:
+    am: AM
+    pm: PM
+  attach_file: Attach a file
+  edit_forum_category: Edit Forum Category
+  total: Total
+  service_task: Service Task
+  export_data:
+    thirt_days: Last 30 Days
