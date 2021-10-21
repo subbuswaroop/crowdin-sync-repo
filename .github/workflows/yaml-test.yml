@@ -21,5 +21,5 @@ jobs:
         
       - name: Print yaml key
         working-directory: locales-yml
-        run: cat test.yaml | yq e '.en.time.am'
+        run: cat test.yml | yq e '.en.time.am'
 #         run: echo {{ yq e '.en.time.am' ../locales-json/en.yaml }}
