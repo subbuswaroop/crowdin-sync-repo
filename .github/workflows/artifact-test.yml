@@ -16,7 +16,7 @@ jobs:
         run: git fetch
       
       - name: git diff
-        run: git diff fd4833e5123dc0a30081ca1ab1d8626746dad73d f02a364 -- locales-json/en.json -U0 > artifacts/git-diff.txt
+        run: echo git diff fd4833e5123dc0a30081ca1ab1d8626746dad73d f02a364 -- locales-json/en.json -U0
 
 #     - uses: actions/upload-artifact@v2
 #       with:
