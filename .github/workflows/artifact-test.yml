@@ -9,6 +9,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - run: |
+        git fetch
         git diff --diff-filter=ACMRT "fd4833e5123dc0a30081ca1ab1d8626746dad73d" "f02a364" > artifacts/git-diff.txt
 
     - uses: actions/upload-artifact@v2
