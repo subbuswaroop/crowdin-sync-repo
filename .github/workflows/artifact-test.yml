@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: "Check file existence"
-        run: '(test -f crowdin.yml && echo crowdin exists) || echo crowdin does not exist, skipping step'
+        run: '(test -f artifacts/git-diff.txt && echo diff exists) || echo diff does not exist, skipping step'
         
       - name: Git actions
         run: |
