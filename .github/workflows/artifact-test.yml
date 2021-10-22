@@ -5,12 +5,12 @@ on:
 jobs:
   artifact-workflow:
     runs-on: ubuntu-latest
-    steps:
-      - name: "Check file existence"
-        run: '(test -f crowdin.yml && echo crowdin exists) || echo crowdin does not exist, skipping step'
-
+    steps:    
       - name: Checkout v2
         uses: actions/checkout@v2
+
+      - name: "Check file existence"
+        run: '(test -f crowdin.yml && echo crowdin exists) || echo crowdin does not exist, skipping step'
         
       - name: Git actions
         run: |
