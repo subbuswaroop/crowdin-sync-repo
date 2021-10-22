@@ -16,41 +16,41 @@ jobs:
         with:
           fetch-depth: 0
 
-#       - name: Get changed files
-#         id: changed-files
-#         uses: tj-actions/changed-files@v10
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v10
 
-#       - name: crowdin action
-#         uses: crowdin/github-action@1.4.0
-#         with:
-#           upload_sources: true
-#           download_translations: true
-#           localization_branch_name: 'translations_branch'
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
-#           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+      - name: crowdin action
+        uses: crowdin/github-action@1.4.0
+        with:
+          upload_sources: true
+          download_translations: true
+          localization_branch_name: 'translations_branch'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
           
-#       - name: Set SHA
-#         id: commit-sha
-#         run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
-#       - name: Check SHA
-#         run: |
-#           git_hash=$(git rev-parse --short "$GITHUB_SHA")
-#           git_before_hash="${{ github.event.before }}"
-#           echo "$git_hash"
-#           echo "$git_before_hash"
-#           #echo ${{ steps.commit-sha.outputs.sha_short }}
+      - name: Set SHA
+        id: commit-sha
+        run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+      - name: Check SHA
+        run: |
+          git_hash=$(git rev-parse --short "$GITHUB_SHA")
+          git_before_hash="${{ github.event.before }}"
+          echo "$git_hash"
+          echo "$git_before_hash"
+          #echo ${{ steps.commit-sha.outputs.sha_short }}
           
-      - name: Set croQL query
-        id: croql
-        run: echo ::set-output name=query::$(echo 'count of translations where ( language = @language:"en" and ( context = "fd.portal") ) = 0' | jq -sRr @uri)
+#       - name: Set croQL query
+#         id: croql
+#         run: echo ::set-output name=query::$(echo 'count of translations where ( language = @language:"en" and ( context = "fd.portal") ) = 0' | jq -sRr @uri)
 
       - name: Get All Strings
         id: strings-list
         uses: satak/webrequest-action@master
         with:
-          url: https://api.crowdin.com/api/v2/projects/480641/strings?croql="${{ steps.croql.outputs.query }}"
+          url: https://api.crowdin.com/api/v2/projects/480641/strings
           method: GET
           headers: '{"Authorization": "Bearer ${{ secrets.CROWDIN_PERSONAL_TOKEN }}"}'
 
