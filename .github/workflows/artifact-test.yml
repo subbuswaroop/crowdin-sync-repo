@@ -16,7 +16,9 @@ jobs:
         run: git fetch
       
       - name: git diff
-        run: echo git diff fd4833e5123dc0a30081ca1ab1d8626746dad73d f02a364 -- locales-json/en.json -U0
+        run: |
+          git_var=$(git diff fd4833e5123dc0a30081ca1ab1d8626746dad73d f02a364 -- locales-json/en.json -U0)
+          echo "$git_var"
 
 #     - uses: actions/upload-artifact@v2
 #       with:
