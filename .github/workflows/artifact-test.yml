@@ -9,7 +9,7 @@ jobs:
       - name: "Check file existence"
         uses: andstor/file-existence-action@v1
         with:
-          files: "/artifacts/git-diff.txt"
+          files: "crowdin.yml"
           
       - name: File exists
         if: steps.check_files.outputs.files_exists == 'true'
