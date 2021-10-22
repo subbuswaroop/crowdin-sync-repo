@@ -14,5 +14,6 @@
     "fd.outbound_email": "Outbound Email",
     "common.copy.success": "Copied!",
     "fd.emailtemplate": "Email template",
-    "fd.createmenu": "Create menu"
+    "fd.createmenu": "Create menu",
+    "common.success": "Success"
 }
