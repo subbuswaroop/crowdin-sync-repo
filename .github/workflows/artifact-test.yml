@@ -6,15 +6,23 @@ jobs:
   artifact-workflow:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+      - name: "Check file existence"
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "artifacts/git-diff.txt"
+          
+      - name: File exists
+        if: steps.check_files.outputs.files_exists == 'true'
+        # Only runs if all of the files exists
+        run: echo All files exists!
 
-    - run: |
-        FILE=/artifacts/git-diff.txt
-        if test -f "$FILE"; then
-          echo "$FILE exists."
-        fi
-    - run: git fetch
-    - run: git diff fd4833e5123dc0a30081ca1ab1d8626746dad73d f02a364 -- locales-json/en.json -U0 > artifacts/git-diff.txt
+      - name: Checkout v2
+        uses: actions/checkout@v2
+        
+      - name: Git actions
+        run: |
+          git fetch
+          git diff fd4833e5123dc0a30081ca1ab1d8626746dad73d f02a364 -- locales-json/en.json -U0 > artifacts/git-diff.txt
 
 #     - uses: actions/upload-artifact@v2
 #       with:
