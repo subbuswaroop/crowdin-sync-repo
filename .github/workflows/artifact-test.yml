@@ -8,11 +8,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - run: mkdir -p /artifacts
-
-    - run: echo git diff fd4833e5123dc0a30081ca1ab1d8626746dad73d f02a364 -- locales-json/en.json -U0 | grep '^[+]' | grep -Ev '^(--- a/|\+\+\+ b/)' > /artifacts/diff.txt
+    - run: echo git diff fd4833e5123dc0a30081ca1ab1d8626746dad73d f02a364 -- locales-json/en.json -U0 | grep '^[+]' | grep -Ev '^(--- a/|\+\+\+ b/)' > /artifacts/git-diff.txt
 
     - uses: actions/upload-artifact@v2
       with:
         name: my-artifact
-        path: /artifacts/diff.txt
+        path: /artifacts/git-diff.txt
