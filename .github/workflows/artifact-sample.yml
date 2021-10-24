@@ -48,7 +48,7 @@ jobs:
           do
            queryString+="identifier=\".${each}\" or "
           done
-          output1=$(jq -nRr --arg s "${queryString/%?????/}" '$s|@uri')
+          output1=$(jq -nRr --arg s "${queryString/%????/}" '$s|@uri')
           echo "https://api.crowdin.com/api/v2/projects/480641/strings?croql=${output1}"
           echo ::set-output name=outputvar::$(echo "https://api.crowdin.com/api/v2/projects/480641/strings?croql=${output1}")
           
