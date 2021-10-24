@@ -38,7 +38,7 @@ jobs:
       - name: Filter strings
         run: |
           while IFS= read -r line; do
-            echo "$line" | tr -d '+' | sed -e 's/^[ \t]*//'
+            echo "$line" | tr -d '+' | sed -e 's/^[ \t]*//' | cut -d: -f1
           done < git-diff.txt
 #       - name: Print the final result
 #         shell: bash
