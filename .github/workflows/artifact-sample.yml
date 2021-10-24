@@ -36,7 +36,8 @@ jobs:
         with:
           name: gitdiff
 
-      - name: Filter strings
+      - name: Format Query String
+        id: query-string
         run: |
           arr1=()
           queryString=""
@@ -45,19 +46,19 @@ jobs:
           done < git-diff.txt
           for each in "${arr1[@]}"
           do
-           queryString+="identifier=\".${each}\" and "
+           queryString+="identifier=\".${each}\" or "
           done
-          echo "$queryString"
           output1=$(jq -nRr --arg s "${queryString/%?????/}" '$s|@uri')
           echo "https://api.crowdin.com/api/v2/projects/480641/strings?croql=${output1}"
+          echo ::set-output name=outputvar::$(echo "https://api.crowdin.com/api/v2/projects/480641/strings?croql=${output1}")
           
-#       - name: Get All Strings
-#         id: strings-list
-#         uses: satak/webrequest-action@master
-#         with:
-#           url: https://api.crowdin.com/api/v2/projects/480641/strings
-#           method: GET
-#           headers: '{"Authorization": "Bearer ${{ secrets.CROWDIN_PERSONAL_TOKEN }}"}'
+      - name: Get All Strings
+        id: strings-list
+        uses: satak/webrequest-action@master
+        with:
+          url: ${{ steps.query-string.outputs.outputvar }}
+          method: GET
+          headers: '{"Authorization": "Bearer ${{ secrets.CROWDIN_PERSONAL_TOKEN }}"}'
 
 #       - name: Print the final result
 #         shell: bash
