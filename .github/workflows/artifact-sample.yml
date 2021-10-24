@@ -45,7 +45,7 @@ jobs:
           done < git-diff.txt
           for each in "${arr1[@]}"
           do
-           queryString+='identifier=".'+"$each"+'" and '
+           queryString+="identifier=\".${var1}\" and '
           done
           echo "$queryString"
           output1=$(jq -nRr --arg s "${queryString/%?????/}" '$s|@uri')
