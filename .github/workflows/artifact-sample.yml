@@ -47,8 +47,8 @@ jobs:
           do
            queryString+="identifier=.$each and "
           done
-          output1=$( jq -nRr --arg s "$queryString" '$s|@uri')
-          echo "https://api.crowdin.com/api/v2/projects/480641/strings?croql=${output1/%?????/}"
+          output1=$(jq -nRr --arg s "${queryString/%?????/}" '$s|@uri')
+          echo "https://api.crowdin.com/api/v2/projects/480641/strings?croql=${output1}"
           
 #       - name: Get All Strings
 #         id: strings-list
