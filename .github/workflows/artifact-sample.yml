@@ -5,7 +5,7 @@ on:
 
 jobs:
   job_1:
-    name: Add 3 and 7
+    name: Git Diff Fetch
     runs-on: ubuntu-latest
     steps:
       - name: Checkout v2
@@ -40,7 +40,7 @@ jobs:
           arr1=()
           queryString=""
           while IFS= read -r line; do
-            arr1+=($(echo "$line" | tr -d '+' | sed -e 's/^[ \t]*//' | cut -d: -f1))
+            arr1+=($(echo "$line" | grep -o -m1 '".*"' | sed 's/"//g' | cut -d: -f1))
           done < git-diff.txt
           
           for each in "${arr1[@]}"
