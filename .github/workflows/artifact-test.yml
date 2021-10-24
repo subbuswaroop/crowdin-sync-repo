@@ -8,6 +8,8 @@ jobs:
     steps:    
       - name: Checkout v2
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
 
       - name: "Check file existence"
         run: '(test -f artifacts/git-diff.txt && echo diff exists) || echo diff does not exist, skipping step'
