@@ -37,9 +37,18 @@ jobs:
           name: gitdiff
       - name: Filter strings
         run: |
+          arr1=()
+          queryString=""
           while IFS= read -r line; do
-            echo "$line" | tr -d '+' | sed -e 's/^[ \t]*//' | cut -d: -f1
+            arr1+=($(echo "$line" | tr -d '+' | sed -e 's/^[ \t]*//' | cut -d: -f1))
           done < git-diff.txt
+          
+          for each in "${arr1[@]}"
+          do
+           queryString+="identifier=.$each and "
+          done
+          
+          echo "${queryString}"
 #       - name: Print the final result
 #         shell: bash
 #         run: |
