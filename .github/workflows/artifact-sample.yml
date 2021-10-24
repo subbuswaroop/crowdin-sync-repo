@@ -18,7 +18,7 @@ jobs:
         
       - name: Git Diff
         run: |
-          git diff fd4833e5123dc0a30081ca1ab1d8626746dad73d f02a364 -- locales-json/en.json -U0 > git-diff.txt
+          git diff fd4833e5123dc0a30081ca1ab1d8626746dad73d f02a364 -- locales-json/en.json -U0 | grep '^[+]' | grep -Ev '^(--- a/|\+\+\+ b/)' > git-diff.txt
 
       - name: Upload git diff artifact
         uses: actions/upload-artifact@v2
