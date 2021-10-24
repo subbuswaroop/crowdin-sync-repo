@@ -38,5 +38,4 @@ jobs:
       - name: Print the final result
         shell: bash
         run: |
-          value=`cat git-diff.txt`
-          echo $value
+          cat git-diff.txt
