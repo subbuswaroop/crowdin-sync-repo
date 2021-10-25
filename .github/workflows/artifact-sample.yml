@@ -67,10 +67,10 @@ jobs:
 
       - name: Print data
         run: |
-          result=$(echo ${{ steps.crowdin-data.outputs.crowdinData }})
+          result=($(echo ${{ steps.crowdin-data.outputs.crowdinData }}))
           for each in "${result[@]}"
           do
-           echo "$each" | jq '.id'
+           echo "$each" | jq '.data.id'
           done
 #   job_4:
 #     runs-on: ubuntu-latest
