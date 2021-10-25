@@ -67,7 +67,7 @@ jobs:
 
       - name: Print data
         run: |
-          echo ${{ steps.vars.outputs.crowdinData }}
+          echo ${{ steps.crowdin-data.outputs.crowdinData }}
 
 #       - name: Print the final result
 #         shell: bash
