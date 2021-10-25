@@ -67,7 +67,7 @@ jobs:
 
       - name: Print data
         run: |
-          result=($(echo ${{ steps.crowdin-data.outputs.crowdinData }}))
+          result=${{ steps.crowdin-data.outputs.crowdinData }}
           echo "$result"
 
 
