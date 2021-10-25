@@ -68,23 +68,27 @@ jobs:
       - name: Print data
         run: |
           result=($(echo ${{ steps.crowdin-data.outputs.crowdinData }}))
-          for each in "${result[@]}"
-          do
-           echo "$each" | jq '.data'
-          done
+          echo "$result"
+
+
 #   job_4:
 #     runs-on: ubuntu-latest
 #     strategy:
 #       matrix:
-#         python-version: [ '2.x', '3.x', 'pypy-2.7', 'pypy-3.6', 'pypy-3.7' ]
-#     name: Python ${{ matrix.python-version }} sample
+#         node: [ '12', '14', '16' ]
+#     name: Node ${{ matrix.node }} sample
 #     steps:
 #       - uses: actions/checkout@v2
-#       - name: Setup python
-#         uses: actions/setup-python@v2
+#       - name: Setup node
+#         uses: actions/setup-node@v2
 #         with:
-#           python-version: ${{ matrix.python-version }}
-#           architecture: x64
+#           node-version: ${{ matrix.node }}
+#       - run: npm install
+#       - run: npm test
+#          for each in "${result[@]}"
+#          do
+#           echo "$each" | jq '.data'
+#          done
 
 #       - name: Print the final result
 #         shell: bash
