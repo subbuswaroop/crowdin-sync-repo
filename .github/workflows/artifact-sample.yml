@@ -52,13 +52,22 @@ jobs:
           echo "https://api.crowdin.com/api/v2/projects/480641/strings?croql=${output1}"
           echo ::set-output name=outputvar::$(echo "https://api.crowdin.com/api/v2/projects/480641/strings?croql=${output1}")
           
-      - name: Get All Strings
+      - name: Get All Mathcing Strings From Crowdin
         id: strings-list
         uses: satak/webrequest-action@master
         with:
           url: ${{ steps.query-string.outputs.outputvar }}
           method: GET
           headers: '{"Authorization": "Bearer ${{ secrets.CROWDIN_PERSONAL_TOKEN }}"}'
+          
+      - name: Get crowdin data
+        id: crowdin-data
+        run: |
+          echo ::set-output name=crowdinData::$(echo '${{ steps.strings-list.outputs.output }}' | jq '.data.data')
+
+      - name: Print data
+        run: |
+          echo ${{ steps.vars.outputs.crowdinData }}
 
 #       - name: Print the final result
 #         shell: bash
