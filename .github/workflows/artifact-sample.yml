@@ -70,7 +70,7 @@ jobs:
           result=($(echo ${{ steps.crowdin-data.outputs.crowdinData }}))
           for each in "${result[@]}"
           do
-           echo "$each"
+           echo "$each" | jq '.data'
           done
 #   job_4:
 #     runs-on: ubuntu-latest
