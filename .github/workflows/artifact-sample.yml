@@ -67,10 +67,7 @@ jobs:
 
       - name: Print data
         run: |
-          for each in "${{ steps.crowdin-data.outputs.crowdinData }}"
-          do
-            echo "$each"
-          done
+          echo "${{ steps.crowdin-data.outputs.crowdinData }}" | jq '.'
 
 
 #   job_4:
@@ -90,6 +87,10 @@ jobs:
 #          for each in "${result[@]}"
 #          do
 #           echo "$each" | jq '.data'
+#          done
+#          for each in "${{ steps.crowdin-data.outputs.crowdinData }}"
+#          do
+#            echo "$each"
 #          done
 
 #       - name: Print the final result
