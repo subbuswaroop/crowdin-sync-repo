@@ -67,8 +67,10 @@ jobs:
 
       - name: Print data
         run: |
-          result=$(echo "${{ steps.crowdin-data.outputs.crowdinData }}")
-          echo "$result"
+          for each in "${${{ steps.crowdin-data.outputs.crowdinData }}[@]}"
+          do
+            echo "$each"
+          done
 
 
 #   job_4:
