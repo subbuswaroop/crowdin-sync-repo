@@ -50,7 +50,7 @@ jobs:
           done
           output1=$(jq -nRr --arg s "${queryString/%????/}" '$s|@uri')
           echo "https://api.crowdin.com/api/v2/projects/480641/strings?croql=${output1}"
-          echo ::set-output name=outputvar::$(echo "https://api.crowdin.com/api/v2/projects/480641/strings?croql=${output1}")
+          echo ::set-output name=outputvar::$(echo "https://api.crowdin.com/api/v2/projects/480641/strings?croql=${output1}&limit=500")
           
       - name: Get All Mathcing Strings From Crowdin
         id: strings-list
