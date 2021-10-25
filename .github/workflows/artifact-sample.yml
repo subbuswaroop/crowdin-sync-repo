@@ -67,7 +67,12 @@ jobs:
 
       - name: Print data
         run: |
-          echo "${{ steps.crowdin-data.outputs.crowdinData }}" | jq '.'
+          for row in $(echo "${{ steps.crowdin-data.outputs.crowdinData }}" | jq -r '.[] | @base64'); do
+              _jq() {
+               echo ${row} | base64 --decode | jq -r ${1}
+              }
+             echo $(_jq '.data.id')
+          done
 
 
 #   job_4:
