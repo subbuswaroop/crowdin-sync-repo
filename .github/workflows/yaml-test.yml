@@ -21,7 +21,8 @@ jobs:
         
       - name: Print yaml key
         working-directory: locales-yml
-        run: yq eval -o=j en.yml > yml-to-json.txt
+        run: |
+          echo "yq eval -o=j en.yml" > yml-to-json.txt
         
       - name: Upload git diff artifact
         uses: actions/upload-artifact@v2
