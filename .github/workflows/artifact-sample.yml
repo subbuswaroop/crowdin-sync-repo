@@ -74,18 +74,18 @@ jobs:
             echo $(_jq '.data.id')
           done
   
-  job_3:
-    name: Add String comments
-    runs-on: ubuntu-latest
-    needs: job_2
-    steps:
-      - name: Connect to Crowdin
-        uses: satak/webrequest-action@master
-        with:
-          url: https://api.crowdin.com/api/v2/projects/480641/comments
-          method: POST
-          payload: '{"text": "test comment","stringId": 59,"targetLanguageId": "en","type": "comment"}'
-          headers: '{"Authorization": "Bearer ${{ secrets.CROWDIN_PERSONAL_TOKEN }}"}'
+#   job_3:
+#     name: Add String comments
+#     runs-on: ubuntu-latest
+#     needs: job_2
+#     steps:
+#       - name: Connect to Crowdin
+#         uses: satak/webrequest-action@master
+#         with:
+#           url: https://api.crowdin.com/api/v2/projects/480641/comments
+#           method: POST
+#           payload: '{"text": "test comment","stringId": 59,"targetLanguageId": "en","type": "comment"}'
+#           headers: '{"Authorization": "Bearer ${{ secrets.CROWDIN_PERSONAL_TOKEN }}"}'
 
 
 #   job_4:
