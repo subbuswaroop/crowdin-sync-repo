@@ -8,4 +8,1493 @@ en:
   service_task: Service Task
   export_data:
     thirt_days: Last 30 Days
-    three_days: Last 3 Days
+    seven_days: Last 7 Days
+    twenty_four: From yesterday
+    custom_filter: Set date
+    customer_export:
+      note: This link will expire in 15 days.
+    no_fields_selected: Please check atleast one of the below fields to proceed.
+    no_tickets_mail:
+      body: Seems like there are no tickets in the provided date range.
+    export: Export
+    csv: CSV
+    xls: Excel
+    select_all: Select all
+    select_header: Select all fields
+    from: From
+    select_format: 'Export as:'
+    filter_label_customer: Filter tickets created in
+    data_backup_failure:
+      body: Your data export has failed. Can you please initiate the export again?
+    data_backup:
+      body: Your data export is ready for download.
+    to: To
+    check_uncheck_title: Check/Uncheck all
+    view_all_tickets: Export as CSV
+    field_select_title: Select fields to export
+    ticket_export:
+      note: This link will expire in 15 days.
+    no_articles_mail:
+      body: Seems like there are no articles for the provided filters.
+    audit_log_export:
+      note: This link will expire in 15 days.
+  go_back: Go back
+  change_plan_title: Are you sure you want to change plan?
+  mailbox:
+    imap_port: Port
+    authentication: 'Authentication:'
+    user_name: User Name
+    imap_server_info: IMAP server name to fetch the emails
+    outgoing_mail_settings: Outgoing Mail Settings
+    use_mail_server_for: 'Use mail server for:'
+    domain_name: Domain Name
+    delete_from_server: Delete emails from server after fetching?
+    use_your_own: Use your own mail server
+    verifying_mailbox_input: Verifying...
+    use_ssl_tls: Use SSL/TLS
+    use_default: Default (Freshdesk Support Desk)
+    domain: 'Domain:'
+    use_ssl: Use SSL
+    smtp_port: Port
+    smtp_alert_gmail: >-
+      Gmail limits the number of emails sent per day. <a target="_blank"
+      href="https://support.google.com/a/answer/166852?hl=en">Click here</a> to
+      learn more.
+    incoming_and_outgoing: Incoming and Outgoing
+    imap_server_name: IMAP Server Name
+    password: Password
+    outgoing_mail_server: 'Outgoing Mail Server:'
+    smtp_server_name: SMTP Server Name
+    outgoing_only: Outgoing only
+    mail_server: 'Mail Server:'
+    incoming_mail_server: 'Incoming Mail server:'
+    smtp_server_info: SMTP server name to send emails
+    email_system: 'Email System:'
+    incoming_mail_settings: Incoming Mail Settings
+  new_threads_on_my_tickets: New Threads on my tickets
+  new_replies_on_my_thread: New replies on my Thread
+  threads_i_am_tagged_in: Threads I am tagged in
+  success: Success
+  forum:
+    max_description_length_allowed: Maximum 250 characters
+    verb:
+      announcement: Announced by
+      questions: Question asked by
+      problems: Problem Reported by
+      ideas: Idea shared by
+    new: New Forum
+    visible_to: Visible to
+    edit: Edit Forum
+    convert_to_ticket: Auto-Convert Topics to Tickets
+    start_topic: Start Topic
+    title: Forums
+    type: Forum Type
+    category: Forum Category
+    convert_to_ticket_info: >-
+      All new topics created in this forum will automatically be converted and
+      created as a ticket.
+  your_feedback: Your feedback
+  agent_working_on_this_ticket: Agent Working on This Ticket
+  zendesk_import_status:
+    extracting: >-
+      <b>Step (1/2) Downloading your Zendesk backup file.</b><br/>This might
+      take a few minutes depending on the size of your data. Please wait.
+    info: >-
+      <b>Step (2/2) Import in progress. Please wait.</b><br/>You will receive an
+      email from us once the import is complete.
+  more: more
+  message: Message
+  level_label: Level
+  topics:
+    edit_title: Edit
+    show:
+      mark_this_idea_as: Mark this idea as
+      mark_this_problem_as: Mark this problem as
+  step1: Step 1
+  contacts:
+    contacts: contacts
+    deleted_user_info: 'Note: All communication from the deleted users will be marked as SPAM.'
+    reply: Reply
+    new: New Contact
+    send_activation: Send activation email
+    add_new_requester: Add New Requester
+    new_topic: New Topic
+    status_title:
+      verified: Active contacts
+      unverified: Contacts with unverified emails
+      blocked: Blocked contacts
+      all: All contacts
+      deleted: Deleted contacts
+    showing: 'Showing:'
+    status:
+      all: All
+      unverified: Unverified
+      deleted: Deleted
+      blocked: Blocked
+      verified: Verified
+      spam: Spam
+    title: Contacts
+    restore: Restore
+    convert_note: >-
+      Converting to agent will delete all the secondary emails of this contact.
+      Proceed to convert?
+    info2: Convert to an Agent
+  no_message:
+    products: You have not created any product yet.
+  forum_confirm_msg1: Are you sure you want to delete this category?
+  undo_toggle: Undo send
+  reorder: Reorder
+  email_command_settings_heading: Email Command Settings
+  billing_address: Billing Address
+  shipping_address: Shipping Address
+  edit_address: Edit address
+  enter_value: Enter Value
+  view_invoices: 'View invoices: '
+  reported_by: 'Reported by '
+  requesting: Requesting...
+  save: Save
+  change_password: Change Password
+  filter_options:
+    tags: Tags
+    source: Source
+    unassigned: Unassigned
+  no_topics_text: No topics
+  folder:
+    edit: Edit Folder
+  example: example
+  conv_contacts_info: '%{conv_type_msg} : %{to_emails} %{cc_emails_key} %{bcc_emails_key}'
+  customers: Customers
+  import_solution_article_info: 'Note: We will not save the forum comments'
+  none: None
+  mailer_notifier:
+    security_notification:
+      trusted_ip_enabled:
+        one: 'IP whitelisting has been enabled on your account. Your portal will be accessible only in the IP range below:'
+        other: 'IP whitelisting has been enabled on your account. Your portal will be accessible only in the IP ranges below:'
+      trusted_ip_modified:
+        one: 'The whitelisted IP addresses were modified on your account. Your portal will be accessible only in the IP range below:'
+        other: 'The whitelisted IP addresses were modified on your account. Your portal will be accessible only in the IP ranges below:'
+      trusted_ip_disabled: "IP whitelisting has been disabled on your account."
+      trusted_ip_actor: 'These modifications were made by %{user_name} on %{time}.'
+      trusted_ip_actor_change: 'This was done by %{user_name} on %{time}.'
+      trusted_ip_create_time: 'This was done on %{time}.'
+      agent_email_change: 'The email address associated with your account has been changed on %{time}.'
+      unauthorized_change_contact: If this change was made without your authorization, please contact your account administrator right away.
+      agent_deleted: 'An agent, %{agent_name} was deleted by %{doer} in your account on %{time}.'
+      deleted_agent_info: 'Note that %{agent_name} will still exist in your account as a contact.'
+      current_agent_stats: 'You currently have %{full_time} full time agents and %{occasional} occasional agents in your Freshdesk Support Desk account.'
+      current_agent_stats_with_all_types: 'You currently have %{agent_stats} in your Freshdesk Support Desk account.'
+      update_agent_billing: 'To reflect this change in your billing, please <a href="%{billing_url}">update</a> the agent information in the billing page.'
+      update_agent_billing_plain: 'To reflect this change in your billing, please update the agent information in the billing page.'
+      agent_added: 'A new %{agent_type} agent, %{agent_name} was added by %{doer} in your account on %{time} and has the %{agent_data_key} %{agent_data_value}.'
+      agent_updated:
+        one: 'Your %{data_updated} was updated on %{time}.'
+        other: 'Your %{data_updated} were updated on %{time}.'
+      email_changed: 'You have changed the email address associated with %{agent_name} on %{time}.'
+      agent_cannot_access: 'Please note that %{agent_name} may not be able to access the %{account_name} account anymore.'
+      unauthorized_change_info: 'If this change was made without your authorization, send us a reply.'
+      configure_change: 'You can configure this notification settings under Admin -> Security.'
+      configure_change_html: 'You can configure this notification settings by <a href="%{security_url}"> clicking here </a> or going to Admin -> Security in your account'
+    hi: 'Hi,'
+    freshdesk_customer_support: Freshdesk Support Desk Customer Support
+    thanks: 'Thanks,'
+    hello_there: 'Hello there,'
+    note: 'Note: '
+    freshdesk_support: Freshdesk Support
+    turn_off: 'Turn Off,'
+    regards: 'Regards,'
+    freshdesk_support_team: Freshdesk Support Team
+    note_for_recipients: 'Note: This email was also sent to - %{to_emails}.'
+    freshdesk: Freshdesk Support Desk
+    attachment: 'Attachments:'
+    specific_agent_activation_email: 'Hi %{agent_name}, <br><br> %{doer} has invited you to be a collaborator in %{helpdesk_name} Helpdesk.
+                                      <br><br> As a collaborator, you can view tickets or reports you have access to, view customer 
+                                      history, access the Knowledge base, and help your colleagues provide exceptional customer support.
+                                      <br><br> Click on the URL below to go to your account. <br><br>
+                                      <a href="%{activation_url}"> %{activation_url} </a> <br><br>'
+    specific_agent_activation_email_footer: 'Thanks,<br> %{helpdesk_name} Helpdesk <br><br> P.S. New to Freshdesk? Learn how to use the helpdesk by enrolling in the 
+                                      <a href="https://freshdesk.com/academy?utm_source=activation-email" target="_blank">Freshdesk Academy.</a>'              
+    notify_new_follower:
+      topic:
+        title: Added as topic follower
+        message: 'You have been added as a follower by %{name} to this topic.'
+        unfollow: Stop following this topic
+      forum:
+        title: Added as forum follower
+        message: 'You have been added as a follower by %{name} to this forum.'
+        unfollow: Stop following this forum
+    email_config_notifier:
+      activation_instructions:
+        body: >-
+          This email has been added as your support email address in
+          %{app_name}. Click the URL below to activate your support email
+          <br><br> %{activation_url} <br><br> If the above URL does not work,
+          try copying and pasting it into your browser. If you continue to have
+          problems, please feel free to contact us.
+      test_email:
+        body: >-
+          You’ve received the test mail you just sent out from Freshdesk Support Desk
+          account. <br><br> If everything worked fine, you should now see this
+          mail converted to a new ticket. Hop over to your Freshdesk Support Desk helpdesk
+          portal and look under the "Ticket" tab. <br><br> Got it? Great! Now
+          everytime your customers send you an email here, you’ll have it appear
+          as a ticket in Freshdesk Support Desk automatically! <br><br> If your helpdesk did
+          not show you a new ticket, first make sure that you have configured
+          all your emails in this id to get forwarded to your Freshdesk support
+          id ( "%{to_email}" ). You can learn how to do this <a
+          href=%{support_url} target=_blank >here</a>. Still having problems?
+          Get in touch with us at support@freshdesk.com and we’ll help you set
+          this up.
+        support_url: >-
+          https://support.freshdesk.com/support/solutions/articles/37541-converting-your-support-email-into-freshdesk-tickets
+    draft_mailer:
+      discard_email:
+        discard_msg_html: >-
+          The draft version of the article %{article_url} was discarded by
+          %{user} on %{time}
+        discard_msg_plain: >-
+          Your draft of the article "%{title}" was discarded by %{user} on
+          %{time} .
+        view_article: View Article
+        draft_by_html: '<h3> %{title} <h5> by %{author} <h5> </h3>'
+        draft_by_plain: '%{title} by %{author}'
+    ecommerce_notifier:
+      token_expiry:
+        token_expiry_msg: >-
+          We want to let you know that your auth token for Ecommerce account
+          %{account_name} will expire in %{expiry_date}.
+        token_update: Please revoke the token and update the account inorder to be active.
+        view_account: View account
+        contact_us: >-
+          If you have queries of any kind, please do not hesitate to contact us:
+          support@freshdesk.com
+    report_export_mailer:
+      common:
+        filters_applied: 'Filters applied:'
+        date_range: Date Range
+        date_range_title: 'Date Range:'
+      bi_report_export:
+        report_download_html: >-
+          You can download the file from <a href=%{export_url}>here</a> (It will
+          expire in 45 days).
+        report_download_plain: >-
+          You can download the file from %{export_url} (It will expire in 45
+          days).
+        report_complete: >-
+          The %{report_label} report %{ticket_export} export you had requested
+          is complete.
+        paste_url: >-
+          If the link does not work, copy and paste the URL below in your
+          browser's address bar:
+        file_attached: Please find the file attached with this mail.
+        for_metric: 'For metric:'
+        report_name: 'Report Name:'
+        ticket: ticket
+      no_report_data:
+        main_msg: >-
+          Seems like there is no data to display for date range %{date_range}
+          with applied filters.
+      exceeds_file_size_limit:
+        file_size_error: Sorry your pdf File size > 10MB.
+        report_name: 'Scheduled report name:'
+      report_export_task:
+        cvs_report_request: 'CSV report requested at:'
+        no_of_invalid: 'No. of invalid accounts:'
+        description: 'Description:'
+    user_notifications:
+      notify_dkim_activation: 'DKIM signatures are now activated for emails sent from %{email_domain}.'
+      notify_dkim_failure: 'DKIM verification failed for domain %{email_domain}.'
+      notify_dkim_enforcement_note: >-
+        You have received this email as you have configured one or more custom domains and are using 
+        Freshdesk server to send emails.
+      notify_dkim_whats_dkim: 'What is DKIM?'
+      notify_dkim_whats_dkim_1: >-
+        Domain verification is a mandatory check if you are using the default Freshdesk server as the 
+        email communication method.
+      notify_dkim_whats_dkim_2: >-
+        To perform domain verification, we support DKIM (Domain Key Identified Mail) that makes 
+        your organization capable of authenticating the communication between you and your 
+        customers.
+      notify_dkim_whats_dkim_2_html: >-
+        To perform domain verification, we support <strong>DKIM (Domain Key Identified Mail)</strong> that makes 
+        your organization capable of authenticating the communication between you and your 
+        customers.
+      notify_dkim_enforcement_setup: 'How can you set up DKIM?'
+      notify_dkim_setup_text: >-
+        You can enable DKIM for the email domain of your support email address from within Freshdesk, using 
+        the DKIM Settings option under Admin > Channels > Email > Advanced Settings > Configure DKIM.
+      notify_dkim_setup_text_html: >-
+        You can enable DKIM for the email domain of your support email address from within Freshdesk, using 
+        the DKIM Settings option under <strong>Admin > Channels > Email > Advanced Settings > Configure DKIM.</strong>
+      notify_dkim_enforcement_when: 'When do you have to set up DKIM?'
+      notify_dkim_when_text: >-
+        We urge you to set up DKIM as soon as possible to ensure the proper delivery of your incoming and 
+        outgoing emails from your Freshdesk Support Desk account. You will also see a banner inside your 
+        account regarding this.
+      notify_dkim_why_dkim: 'Why do you need DKIM?'
+      notify_dkim_why_dkim_1: >-
+        DKIM generates a signature, which is attached to the message while in transit, to verify the 
+        authenticity of the message source.
+      notify_dkim_why_dkim_2: >-
+        This signature is associated with the organization's registered domain name. On reaching the 
+        destination, if the message has its signature validated, then the source of the mail is verified.
+      notify_dkim_why_dkim_3: >-
+        Hence no one can send emails impersonating your organization and support emails sent by 
+        Freshdesk on your behalf will not get marked as spam.
+      notify_dkim_enforcement_footer_note_html: >-
+        <a href='https://support.freshdesk.com/en/support/solutions/articles/223779-email-domain-verification-using-dkim-records' target="_blank">Click here</a> to know more about DKIM. Write to us at <a href='mailto:support@freshdesk.com' target="_blank">support@freshdesk.com</a> if you have any 
+        questions.
+      notify_dkim_enforcement_footer_note: >-
+        Visit https://support.freshdesk.com/en/support/solutions/articles/223779-email-domain-verification-using-dkim-records to know more about DKIM. Write to us at support@freshdesk.com if you have any questions.
+      activate_account: Activate your Freshdesk Support Desk account
+      activation_message: 'Thank you for signing up for Freshdesk Support Desk. We look forward to seeing you
+           support your customers. Click on the button below to activate your
+           account and get started.'
+      activate_button: Activate Account
+      hi_user: 'Hi %{agent_name}'
+      activation_message_support_desk: 'You’re one step away from delighting your customers with Freshdesk Support Desk. 
+      Activate your account by clicking the button below:'
+      activation_message_omnichannel: 'You’re one step away from delighting your customers across every channel with Freshdesk Omnichannel. 
+      Activate your account by clicking the button below:'
+      agent_activation_message_support_desk: '%{performer} wants you to be a part of Freshdesk Support Desk. Join your team by clicking on the button below:'
+      agent_activation_message_omnichannel: '%{performer} wants you to be a part of Freshdesk Omnichannel. Join your team by clicking on the button below:'
+      agent_activate_button_omnichannel: Join your Omnichannel Support Desk
+      agent_activate_button_support_desk: Join your Support Desk
+      paste_url: >-
+        If the button does not work, copy and paste the URL below in your browser's address bar:
+      contact_support: >-
+        Do reply to this email if you continue to face any issues with your activation.
+      regards: Best,
+      app_name: '%{app_name} Team'
+      freshdesk_url: 'Your Freshdesk Support Desk URL:'
+      get_in_touch: Got Questions? Get in touch with us
+      support_email: 'Email: %{support_email}'
+      support_call: 'Call: %{support_number}'
+      ssl_certificate_approved: Your request for a custom SSL certificate has been approved.
+      ssl_steps_introduction: >-
+        We have already turned on Custom SSL in your portal, under
+        Admin->Security. In order for it to work, please follow the steps below
+        to update your CNAME records.
+      ssl_step_1: '1. Login to DNS Control Panel for the custom domain - %{portal_url}. '
+      ssl_step_2: >-
+        2. Create a CNAME record under %{portal_url} and point it to
+        %{elb_name}.
+      ssl_step_3: 3. Wait for a few hours for the changes to take effect.
+      ssl_once_ready: >-
+        Once ready, your support portal at %{portal_url} will be secure thanks
+        to the new SSL certificate.
+      facebook_access_token_expired: >-
+        The access token for your %{page_name} page has expired. This could be
+        because
+      facebook_info_1: One of the admin's changed their facebook password.
+      facebook_info_2: One of the admin's has revoked some app permissions.
+      facebook_info_3: It has been 60 days since the last time you authorized the app.
+      facebook_reauth_link_html: >-
+        Please click on this <a href='%{facebook_url}'>link</a> to reauthorize
+        your facebook page and continue receiving facebook posts as tickets.
+      facebook_reauth_link_plain: >-
+        Please click on this link %{facebook_url} to reauthorize your facebook
+        page and continue receiving facebook posts as tickets.
+      update_billing_info: >-
+        Please update your billing information so that you always have day
+        passes readily available for use.
+      reply_to_email_for_queries: You can reply to this email if you have any questions.
+      locate_accounts_request_html: >-
+        <p>We just received a request to locate any Freshdesk Support Desk accounts
+        associated with this email address.</p><p>Here is a list of accounts
+        where you are an agent. You can click on any of the links below to
+        access your support portal</p>
+      click_on_forgot_password: >-
+        In case you have forgotten the login credentials for your account, you
+        can click on the forgot password link to reset your password.
+      webhook_failed_message: >-
+        The %{automation_type} rule you configured to send API request to
+        %{webhook_url} has failed after several retries.
+      webhook_reconfigure_rule: >-
+        Please check and reconfigure the rule to avoid any loss of
+        communication.
+      webhook_rule_details: 'Rule: %{automation_name} (%{automation_link})'
+      webhook_rate_limit_exceeded: >-
+        A webhook that was scheduled 24 hours ago for execution has now been
+        dropped since you consistently exceeded your API rate limits.
+      webhook_raise_limit_html: >-
+        If you wish to prevent this from happening again, mail us at
+        support@freshdesk.com to raise your API limits. To learn more about how
+        we support webhooks and why we drop them, <a
+        href=%{solution_article_link}>click here.</a>
+      webhook_raise_limit_plain: >-
+        If you wish to prevent this from happening again, mail us at
+        support@freshdesk.com to raise your API limits. To learn more about how
+        we support webhooks and why we drop them, click here
+        %{solution_article_link}.
+      incoming_email_rate_limit_exceeded: >-
+        There are too many incoming emails. Expect a delay in ticket creation.
+        Please mail us at support@freshdesk.com if the issue persists.
+      incoming_facebook_rate_limit_exceeded: >-
+        There are too many incoming facebook events. Expect a delay in ticket creation.
+        Please mail us at support@freshdesk.com if the issue persists.
+      incoming_twitter_rate_limit_exceeded: >-
+        There are too many incoming twitter events. Expect a delay in ticket creation.
+        Please mail us at support@freshdesk.com if the issue persists.
+    scheduled_task_notifications:
+      no_data: >-
+        Seems like there is no data to display for scheduled report that you
+        created for
+      blocked_users:
+        report_not_sent_html: >-
+          The scheduled report that you created for
+          <b>%{scheduled_task_name}</b> was not sent to the following email
+          address(es):
+        report_not_sent: >-
+          The scheduled report that you created for %{scheduled_task_name} was
+          not sent to the following email address(es):
+        reason_title: 'This could be because of one of the following reasons:'
+        first_reason: The contact associated with the email was deleted
+        second_reason: The email address was deleted
+        update_email: 'You can update the email address(es) by clicking on the below link:'
+      downgraded_users:
+        report_being_sent_html: >-
+          The scheduled report that you created for
+          <b>%{scheduled_task_name}</b> is still being sent to the below agents
+          who were deleted/ downgraded to contact recently:
+        report_being_sent: >-
+          The scheduled report that you created for %{scheduled_task_name} is
+          still being sent to the below agents who were deleted/ downgraded to
+          contact recently:
+        update_configuration: >-
+          Please update the configuration if you wish to stop sending this
+          report to the above emails in the future.
+    topic_notifications:
+      new_forum_topic: 'New Topic in "%{forum_name}" %>'
+      new_forum_topic_html: <b>New Topic</b> in forum
+      author: 'By: %{user_name}'
+      view_topic: View Topic
+      follow_topic: Follow Topic
+      reply: Reply
+      view_forum: View Forum
+      turn_off_forum_notifications: Turn off notifications for this forum
+      turn_off_topic_notifications: Turn off notifications for this topic
+      turn_off_new_topic_notifications: Turn off notifications for the new topic
+      turn_off_forum_notifications_html: '<a href=''%{unfollow_url}''>Turn off</a> notifications for this forum'
+      turn_off_topic_notifications_html: '<a href=''%{unfollow_url}''>Turn off</a> notifications for this topic'
+      turn_off_new_topic_notifications_html: >-
+        <a href='%{unfollow_url}'>Turn off</a> new topic notifications for this
+        forum
+      status_update: Status update in topic
+      current_stamp: 'The %{forum_type} has been marked as %{stamp}.'
+      current_stamp_html: 'The %{forum_type} has been marked as <strong>%{stamp}</strong>.'
+      merged_and_added_follower: >-
+        Your topic %{topic_url} has been merged into %{target_topic_url} and you
+        have been added as a follower.
+      merged_and_added_follower_html: >-
+        Your topic <a href='%{topic_url}'>%{topic_name}</a> has been merged into
+        <a href='%{target_topic_url}'>%{target_topic_name}</a> and you have been
+        added as a follower.
+    subscriptions:
+      admin_spam_watcher:
+        unblock_message: >-
+          Below listed users are blocked by our spam watcher. If you feel they
+          are genuine users, you can send an email to %{support_email} with the
+          following details.
+        account_url: 'Account url: %{account_url}'
+        username: 'Username: %{user_details}'
+        whitelist_message: >-
+          Below listed users are blocked by our spam watcher.If you feel they
+          are genuine users, you can whitelist them by clicking the links.
+        unblock: '<a href=''%{unblock_link}''>unblock</a>'
+      admin_spam_watcher_blocked: >-
+        Your Account has been blocked due to high volume of traffic. If you feel
+        your requests are genuine, please send an email to %{support_email} with
+        your account details.
+      account_cancel: >-
+        <div>This email is a confirmation that your Freshdesk Support Desk account has been
+        cancelled. We’re sorry to see you go.</div><br/> <div>If you have
+        feedback on how we can provide a better experience, please write to us
+        at %{support_email}. We’d love to hear from you. </div>
+    post_monitor:
+      new_reply_html: '<b>New Reply</b> - %{posts_count} replies in topic'
+      new_reply_plain: 'New Reply on topic %{post_topic}'
+      reply_notify_html: Reply notifications for this topic
+      reply_notify_plain: Turn off reply notifications for this topic
+    solutions_approval:
+      article_approved_title: 'Article Approved - %{article_title}'
+      article_approved_body_html: >-
+        Hey %{user_name},<br><br>%{approver_name} has approved your
+        article:<br><a href= '%{article_url}' target =
+        '_blank'>%{article_title}</a>
+      article_approved_body_txt: |-
+        Hey %{user_name},
+
+        %{approver_name} has approved your article:
+         %{article_title} - %{article_url}
+      article_in_review_title: 'Review Request - Article: %{article_title}'
+      article_in_review_body_html: >-
+        Hey %{approver_name},<br><br>%{requester_name} has requested you to
+        review the article: <br> <a href= '%{article_url}' target =
+        '_blank'>%{article_title}</a>
+      article_in_review_body_txt: |-
+        Hey %{approver_name},
+
+        %{requester_name} has requested you to review the  article:
+         %{article_title} - %{article_url}
+    click_to_activate: Click here to activate your Freshdesk Support Desk account
+    cool: Cool!
+    sincerely: 'Sincerely,'
+    moderator_approval: Moderator approval
+    rule: 'Rule: '
+    reports: reports
+    hi_team: 'Hi team,'
+    export_success_download: >-
+      The %{export_type} export you had requested is complete. You can download
+      the file from <a href='%{url}'>here</a>. If the link does not work, copy
+      and paste the URL below in your browser's address bar:
+    dear_user_plain: 'Dear user,'
+    hello_user: 'Hello %{user},'
+    freshdesk_team: Freshdesk Support Desk Team
+    hi_user: 'Hi %{user_name},'
+    topics_awaiting_approval: There are topics waiting for your approval. Please take a look at them.
+    reports_team_freshdesk: 'Reports Team, Freshdesk Support Desk'
+    hey_user: 'Hey %{user_name}'
+    portal_support: '%{portal_name} Support'
+    welcome_to_freshdesk: Welcome to Freshdesk Support Desk!
+    dear_user: 'Dear %{user},'
+  copied_link: copied
+  Email: Email
+  zendesk_backup_info: Select the Zendesk backup file downloaded from zendesk
+  mint: switch to Mint.
+  right: Right
+  agent:
+    insert_placeholder: Insert Placeholder
+    permissions: Permissions
+    delete_agent_confirmation: >-
+      The deleted agent will be available as a contact. This will remove all
+      agent information from the helpdesk. Are you sure you want to proceed?
+    days_ago: '%{days} ago'
+    more: more
+    role: Agent Role
+    agent_restored: The agent has been restored
+    member: Member of
+    search_placeholder: Search all agents
+    ticket_scope: Ticket Scope
+    assign: Assign
+    info3: Are you sure you want delete
+    ago: '%{time} ago.'
+    day_pass_used: 'Used %{count} day pass till date'
+    last_logged: Last logged in
+    group_info: Can view Tickets in their Group(s) and Tickets assigned to them
+    full_time_agent: Full-Time Agent
+    full_time_agent_simple: Full Time Agent
+    remove_role: Remove role
+    add_signature: Add signature
+    remove_group: Remove group
+    group: Groups
+    export: Export
+    convert_to_contact: Convert To Contact
+    individual: Restricted Access
+    contact_exists: 'A requester with email ''%{existing_email}'' already exists, %{use_email}'
+    password_reset_note: 'Note: A reset mail with instructions will be sent to %{requester}'
+    info1: This is a deleted Agent
+    available_seats_without_count: seats available
+    occasional_agent: Occasional Agent
+    day_pass_expired: 'Your day pass has expired, please login to acquire a new day pass.'
+    occasional: Occasional
+    collaborator: 'Collaborator'
+    admin_info: Can perform all Admin tasks
+    admin: Administrator
+    last_logged_in: 'Last logged in %{time} ago.'
+    new: New Agent
+    cannot_edit_roles: 'You will only be able to view your roles and scope, not edit them.'
+    supervisor: Supervisor
+    reset_scores: Reset badges and points
+    add_skills: Add Skills
+    reset_score_alert_you: >-
+      You will lose your badges and your points will be reset to %{points}. Are
+      you sure you want to proceed?
+    update: Update
+    supervisor_info: >-
+      Can view all Tickets in the Helpdesk and access Reports (no admin
+      privileges)
+    available_seats: '%{count} seats available'
+    invalid_export_params: An error occurred while exporting agent data. Please try again.
+    never_logged_in: Never logged in
+    invalid_placeholder: Invalid placeholders inserted
+    individual_info: Can only view Tickets assigned to them
+    reset_score_alert_them: >-
+      %{name} will lose his/her badges and points will be reset to %{points}.
+      Are you sure you want to proceed?
+    full_time: Full time
+    info4: Convert to a Contact
+    roles_description: Associate one or more roles with this agent.
+    buy: Buy more
+    showing: 'Showing:'
+    edit: Edit Agent
+    use_email: Use this email
+    view_user: View User
+    insufficient_day_pass: 'Unable to allocate a day pass for you, please contact your administrator.'
+    groups_description: Associate one or more groups with this agent.
+    helpcard:
+      title4: Scopes and Roles
+      info9: >-
+        Full time agents are those in your support team who will login to your
+        help desk every day.
+      info8: Learn more about Agent Roles
+      info14: >-
+        You can choose which tickets your agents can see by modifying their
+        Ticket Scope. You should also specify what actions an agent is able to
+        perform within your helpdesk by choosing a Role.
+      info5: Learn more about Day Passes
+      info11: >-
+        You can organize agents into specific groups such as Sales and Product
+        Management. Segmenting agents into divisions lets you easily assign
+        tickets, create specific canned responses, manage workflows and generate
+        group-level reports. Note that an agent can be a member of multiple
+        groups.
+      info12: >-
+        An agent in Freshdesk Support Desk is anybody who needs to access, work on and
+        resolve your support tickets. The list shows all agents currently in
+        your helpdesk. Hover over an agent to edit details, or click on New
+        Agent to add a new agent. Agents you add will receive an email with a
+        confirmation link to activate their account after which they can access
+        and respond to tickets.
+      title1: Full-time vs Occasional Agents
+      title3: Groups
+      info15: >-
+        Note that you will not be able to either modify your own roles or delete
+        yourself as an agent.
+      info10: >-
+        Occasional agents are those who would only need to login from time to
+        time, such as your sales and marketing manager to take care of specific
+        customer queries. You need not purchase an additional agent seat for a
+        whole month for such agents.
+      info13: >-
+        You can choose whether your agents will be accessing your support portal
+        full-time, or be logging in only occasionally. Occasional agents will
+        use up a Day Pass for each day they login to your support portal. You
+        can purchase Day Passes in bulk from the Admin tab. Note that you will
+        only be billed for the number of full-time agents you add in the plans
+        and billing section.
+      title5: Field technician
+      info16: >-
+        A field technician is an expert representative from the company who
+        assists users with maintainance, repairs or any other operations outside
+        the company premises on specified locations.
+    export_title: Export Agents to CSV
+    signature: Signature
+    convert_agent_confirmation: >-
+      Warning - Converting an agent to a contact will remove all agent
+      information permanently. Are you sure you want to proceed?
+    password_reset_message: 'Do you want to reset %{requester}''s password?'
+    export_successfull: Your Agents data will be sent to your email shortly!
+    no_seats: No seats available
+    deleted_agent_info: 'Note: All communication from the deleted agents will be marked as SPAM.'
+    title: Agents
+    no_recent_activity: No recent activity
+    type: Agent Type
+    deleted:
+      no_agents: You dont have any deleted agents
+      agent_deleted: The agent has been deleted
+    occasional_description: This agent will be accessing the support portal
+    manage_skills: Manage Skills
+    delete_agent: Delete Agent
+    make_admin: Make this agent an admin
+    global_info: Can view all Tickets in the Helpdesk
+    skill: Skills
+    info2: Email has already been taken
+    assign_role: Associate Roles
+    active:
+      no_agents: You have not added any agents to the list
+    restore: Restore
+    global: Global Access
+    reset_score_title: Reset Badges and Points
+    account_suspended: account suspended
+    roles: Roles
+    last_seen_at: Last seen at
+    trial: In trial version
+    role_and_scope: Roles and Scope
+    assign_group: Associate Groups
+    role_assign_error: You are not allowed to perform this action
+    field_agent: Field technician
+    support_agent: Support agent
+    role_assign_field_agent_error: You are not allowed to pass role_ids for field_agent
+    field_agents: Field technicians
+    group_access: Group Access
+    scope: Scope
+    hard_deleted_email: >-
+      The contact associated with this email is being permanently deleted and
+      not accessible. Please wait for this to be completed before trying to add
+      the email.
+  back: Back
+  change_plan: Change plan
+  current_free_plan: Current Free Plan
+  agent_emailnotverified: Email has not been verified for this agent!
+  zendesk_url_info: 'e.g:- http://acme.zendesk.com or https://acme.zendesk.com'
+  add_holiday: Add Holiday
+  next: Next
+  send_test_email: Send Test Email
+  top: Top
+  enter_a_value: Enter a value
+  backup_error_msg: >-
+    The file exceeds the prescribed limit of 50MB, please <a href='#'
+    id='import_request'>contact support</a> to proceed with the import.
+  email_command_preview_to_email_value: support@acme.freshdesk.com
+  dispatch:
+    reorder: Reorder
+    match_any: Match <b>ANY</b> of the below
+    info3: When a ticket satisfies these conditions
+    rule_name: Rule Name
+    new_rule: New Rule
+    new: Dispatch'r - New Rule
+    add_new_action: Add new action
+    info_help: 'For each incoming ticket, execute first matching rule'
+    dispatch_rules: Dispatch'r - Rules
+    edit: Dispatch'r - Edit Rule
+    helpcard:
+      info1: >-
+        The Dispatch’r lets you bring your business rules into your support
+        workflow by performing a predefined set of actions on newly created
+        tickets. For example, you could use the Dispatch’r to automatically
+        categorize, prioritize and assign every incoming ticket to the right
+        agent in your team, based on the conditions you specify.
+      info2: >-
+        Remember, the order of the Dispatch’r rules are important. For each
+        incoming ticket, Dispatch'r will execute the first matching rule and
+        stop. You can reorder the list of rules to have the most important rules
+        on top.
+      tour_v2: Help me create a Dispatch’r rule
+    default_rule_desc: All subscription related tickets will be assigned to the Billing team
+    inactive_rules: Inactive Rules
+    title: Dispatch'r
+    clone: Dispatch’r - Clone Rule
+    match_all: Match <b>ALL</b> of the below
+    add_condition: Add new condition
+    cascade_text: 'For each incoming ticket, Execute'
+    default_rule_name: All subscription related tickets go to Billing
+    description: Description
+    act_to_perform: Perform these actions
+    conditions: Conditions
+    actions: Actions
+  custom_mailbox_admin_email_notifications:
+    regards: Regards
+    welcome_message: Dear Admin
+  warning: WARNING
+  zendesk_url: Zendesk URL
+  downgrade_plan_title: Are you sure you want to downgrade?
+  migration_downgrade_title: Migrate to %{new_plan} plan
+  migration_downgrade_point_1: Please review and choose the right plan to ensure you have all the capabilities you need. You will no longer be on your original %{current_plan} plan, and will be charged accordingly.
+  migration_downgrade_point_2: Please note that no feature add-ons are available in the new plans and any existing add-ons added to your account will be removed when you switch plans.
+  migration_downgrade_point_3: Your existing bot flows will not work with the new plans, please proceed carefully. In case of any queries please reach out to us at <a target="_blank" href="mailto:support@freshdesk.com">support@freshdesk.com</a>
+  migration_downgrade_point_4: In your new plan you might loose existing bot sessions and a new limit will be applied based on your selected plan.
+  delete_topic_msg: Delete this topic forever
+  resolved_tickets: Resolved Tickets
+  errors_in_payment_info: 'Errors encountered with your payment information:'
+  change_plan_info: 'You can change your plan at any time, your next bill date is %{date}.'
+  custom_mailbox_error_type:
+    unkown_error: >-
+      Unable to fetch emails from custom email server. Please contact
+      support@freshdesk.com
+    ssl_errror: SSL error.
+    server_response_invalid: Server response is in invalid format while connecting to server.
+    unable_to_connect: Unable to connect the folder in Mailbox.
+    tcp_connection: Unable to create TCP connection.
+    tcp_refused: Email server refused TCP connection.
+    mailbox_idle: Mailbox doesn't support IDLE capability.
+    unable_fetch_status: Unable to fetch status of folder.
+    io_error: I/O connection error.
+    mailbox_suspended: Email server suspended
+    server_no_resp: Email server sent NO response while connecting to server.
+    bye_response: Email server sent BYE response while connecting to server.
+    invalid_login: Invalid Login Credentials.
+    folder_unavailable: Folder is unavailable in Mailbox.
+    tcp_socket: Unable to create TCP socket for email server.
+    email_bad_request: Email server sent BAD response while connecting to server.
+  forum_category:
+    select_product: Select a product portal...
+    product_portal_visibility: Visible in
+  choose_plan_trial_v2: >-
+    Your account will be deactivated after the trial period. To continue using
+    Freshdesk Support Desk, please choose a plan below. <br />
+  choose_plan_trial_omni_v2: Your account will be deactivated after the trial period. To continue using Freshdesk Omnichannel, please choose a plan below. <br />
+  anonymous:
+    requests:
+      new:
+        request_support: Request Support
+  cancel: Cancel
+  errors_in_plan_change: 'Errors encountered with your change:'
+  non_covered_feature_error: This feature is currently locked
+  trail_expiry_during_trial: >-
+    Upgrade to a paid account or use Freshdesk Support Desk for free by selecting a plan at
+    any time.
+  company:
+    title: Companies
+    title1: companies?
+    new: New company
+    info10: 'Note: Deleting a company will not delete its contacts.'
+    info11: Are you sure you want to delete
+  forwarded_to: Forwarded to
+  imap_error: Email server inaccessible
+  marketplace:
+    delete_action:
+      success: App deleted successfully.
+      error: >-
+        <span>Error while deleting the App.</span> Please try again. If the
+        error persists, please <a href=https://support.freshdesk.com>contact
+        support.</a>
+    custom_app_info: >-
+      Did you know, now there is a better way to write and manage and even share
+      your apps to all of Freshdesk Support Desk community.
+    share_app: Share this app
+    view_all: View all
+    needs_developer_text: Needs Developer Account
+    no_connection: >-
+      Marketplace is currently unavailable. Please try again later. Please
+      contact us, if the issue persists.
+    app_description: >-
+      Apps allow you to integrate with other applications to make your Freshdesk Support Desk
+      experience more awesome. They also enable you to customize and personalize
+      your Freshdesk Support Desk portal.
+    view_more: View more
+    custom_app_policy: >-
+      "Custom App" is an application developed specifically for a Freshdesk Support Desk
+      customer and not listed in the App Gallery. Custom Apps may be developed
+      by Freshdesk Support Desk or any other developer who may or may not be registered with
+      Freshdesk Support Desk as a Developer. Please note that the Custom App is provided on
+      an "AS IS" basis without any warranties of any kind to the fullest extent
+      permitted by applicable law. Freshdesk Support Desk expressly disclaims any and all
+      conditions, representations, warranties or other terms, whether express or
+      implied, including, but not limited to, any implied warranties of
+      merchantability, title, fitness for a particular purpose, and
+      non-infringement. By installing the Custom App, you understand and
+      acknowledge that Freshdesk Support Desk does not warrant that the Custom App will be
+      uninterrupted, timely, secure, error-free or free from viruses or other
+      malicious software. Freshdesk Support Desk shall not be liable to you or any person
+      claiming through you for any direct, indirect, incidental, special,
+      punitive, or consequential damages for your use of the Custom Apps.
+    installation: Installation
+    terms_of_use_link: 'http://freshdesk.com/terms#marketplace'
+    developed_by: 'Published By '
+    cancel: Cancel
+    all_apps: All Apps
+    api_error: We could not process your request. Please try after sometime.
+    help_and_support: Help and Support
+    settings: Settings
+    app_gallery: Marketplace
+    reauthorize_oauth_app: >-
+      If your app has stopped working, try re-authorizing the app to access
+      information from the third-party applications.
+    helpnote1: >-
+      Apps in Freshdesk Support Desk let you share data with third party solutions and
+      services that you use regularly. They also enable you to add additional
+      features to the ticket and contact details page. Freshdesk Support Desk offers several
+      apps out-of-the-box. To browse our selection of apps, click on the “Get
+      More Apps” button.
+    tooltip:
+      suspended: Not Available
+    app_installation_agreement: 'By installing this app, you agree to abide by our '
+    no_mktp_apps_note_2: Click 'Get More Apps' to browse the selection.
+    screenshots: Screenshots
+    no_configs: This app does not require any configs.
+    backend_log: Serverless Logs
+    custom_apps: Custom Apps
+    third_party_apps_policy: >-
+      This App is owned, developed, operated and maintained by a third party and
+      not Freshworks Inc. By downloading, integrating with and/or using this App
+      you understand that you are bound by the terms and privacy policies of its
+      developer, including on processing of your data. For more details about
+      such terms and privacy policies, please contact the developer or visit the
+      developer's page.
+    time_ago: ago
+    error_calling_method: 'Error occurred while calling method: '
+    no_search_results: >-
+      We couldn't find what you are looking for.Why don't you try again with a
+      different keyword?
+    validation_failed: Validation failed.
+    no_custom_apps_installed: No custom apps installed
+    installing_text: Please wait...
+    paid_app: PAID
+    popular_apps: Popular Apps
+    installed_mkp_apps_unavailable: >-
+      The listing of installed apps is currently unavailable. Please try again
+      later. Please contact us if the issue persists.
+    overview: Overview
+    install: Install
+    write_a_custom_app: Write a custom app
+    published_in: in
+    confirm_uninstall_message: 'Are you sure you want to uninstall the %{human_name}?'
+    instructions: Instructions
+    latest_apps: Latest Apps
+    popular: Popular
+    get_more_apps: Get More Apps
+    apps: Apps
+    policy_on_custom_apps: Policy on custom apps
+    no_custom_apps_note_2: Click 'Get Custom Apps' to browse and install them.
+    version: VERSION
+    reauthorize: Reauthorize
+    reauthorize_header: Reauthorize the app
+    install_action:
+      app_setup_error: There was an error during installation.
+    custom_app_gallery: Custom App Gallery
+    go_to_dev_portal: Go to Developer Portal
+    apps_unavailable: >-
+      Certain apps could not be rendered. Please try again later. Please contact
+      us if the issue persists.
+    policy_on_tp_apps: Policy on third party apps
+    no_mktp_apps_note: We've integrated with some of your favorite applications.
+    developer_shortcuts: Developer Shortcuts
+    ver: 'Version: '
+    installing: Installing
+    coming_soon: Coming Soon
+    latest: Latest
+    no_custom_apps_note: Create custom apps and publish them in the developer portal.
+    no_apps: No Apps available
+    field_blank: Please fill the required fields.
+    terms_of_use: Terms of Use
+    description: Description
+    helpnote_custom_apps_html: >-
+      Can't find an app that fits your needs? With our Custom Apps (earlier
+      called Freshplugs), you can bring in contextual information from any third
+      party solution, legacy system or database. These Custom Apps can also be
+      used to make visual changes to your helpdesk and boost productivity. Click
+      <a href='https://support.freshdesk.com/support/solutions/articles/121846'
+      target='_blank'>here</a> to learn more!
+    almost_done: Almost Done!
+    no_mktp_apps: No Apps installed
+  shortcuts:
+    ticket_detail_list_common:
+      delete_ticket: Delete ticket
+      scenario: Scenarios
+      jump_to_views: Jump to views
+      add_note: Add note
+      reply: Reply
+      prev_next: Navigate between ticket list view pages
+      forward: Forward
+      close: >-
+        Close ticket ( <span class='shortcut-key'>Alt <span>+</span> ~</span> to
+        skip notification )
+      title: Common shortcuts for ticket list and view
+      pickup: Pickup ticket
+      spam: Mark ticket as spam
+      search: Search
+    goto_tab:
+      social: Social
+      tickets: Tickets
+      dashboard: Dashboard
+      forums: Forums
+      customers: Customers
+      solutions: Solutions
+      title: Goto Tab
+    title: Keyboard shortcuts
+    ticket_list:
+      title: Ticket List
+      move_cursor: Jump cursor to next / previous ticket
+      view: View the active ticket
+      hovercard: Show ticket hovercard
+      mark: >-
+        Select a ticket, ( <span class='shortcut-key'>%{modifier_key}
+        <span>+</span> x </span>to select all )
+    ticket_view:
+      watch: >-
+        watch ticket, ( <span class='shortcut-key'>%{modifier_key}
+        <span>+</span> w </span>to add another watcher )
+      expand: Expand conversations
+      add_time: Add time on ticket
+      openDialog: Open dialog
+      toggle_activity: Toggle Activity
+      save: Save / Send
+      title: Ticket View
+  proceed_billing_info: 'Yes, Proceed to Billing'
+  link_with_marketplace: Link with Google Marketplace
+  select_values: Select one or more values
+  integration:
+    helpcard:
+      info1: >-
+        Integrations in Freshdesk Support Desk let you share data with third party
+        applications and services that you use regularly. Freshdesk Support Desk offers
+        several native integrations out-of-the-box. To start using a native
+        integration, click on the corresponding “Enable” button.
+      title2: Custom Apps
+      title1: Integrations
+      info2: >-
+        In addition to the built-in integrations, you can bring in data from any
+        other third party application, legacy system or database into the
+        tickets and contact pages with custom apps. You can customize your
+        custom app widget by pushing relevant information from Freshdesk Support Desk to your
+        data source with an AJAX call, and format and display information with
+        HTML, CSS and Javascript.
+  plans_billing: Plans & Billing
+  gamification:
+    levels:
+      expert: Expert
+      intermediate: Intermediate
+      professional: Professional
+      guru: Guru
+      master: Master
+      beginner: Beginner
+    leaderboard:
+      sharpshooter_trophie_info: Agent with the highest First Call Resolution points this month
+      love_trophie_info: Agent with the maximum Customer satisfaction points this month
+      mvp_trophie_info: Agent with the most overall points this month
+      speed_trophie_label: Speed Racer
+      speed_trophie_info: Agent with the maximum points for fast resolution this month
+      mvp_trophie_label: Most Valuable Player
+      sharpshooter_trophie_label: Sharpshooter
+      love_trophie_label: Customer Wow Champion
+  next_level_info: '+%{points} to become %{name}'
+  delete: Delete
+  contact_field:
+    helpcard:
+      info2: >-
+        The contact form lets you capture additional context about customers
+        quickly by including custom fields based on your type of business. For
+        example, you can collect information with custom fields for pricing
+        plan, department etc. and prioritize tickets.
+      info3: >-
+        Just like your ticket fields, you can add new fields to the customer
+        sign up form and make them mandatory. You can also have private fields
+        that are visible just to your agents.
+      title2: Customizing your contact fields
+  add_note: Add Note
+  reply: Reply
+  user_sessions:
+    new:
+      forgot: I forgot my password?
+      email: Email
+      sign_in_using_google: Sign in using your Google account
+      password: Password
+      remember: Remember me on this computer
+      sign_in_using: Sign In
+      help: Help
+      login: Login
+  enter_payment_details_to_add: Enter payment details to add more agents or to upgrade your current plan
+  explore_higher_plan: Try other plans for free
+  current_plan: Current Plan
+  settings: settings
+  email_notifications_agent_selection_msg: Select agents to notify
+  group:
+    select_business_calendar: Select Business Hours
+    working_hours_header: Business Hours
+    auto_assignment_description: >-
+      Tickets coming into this group will be automatically assigned to available
+      agents based on the assignment method you select
+    info8: >-
+      New: Allow your supervisors the ability to manage automatic ticket
+      assignment and agent availability for the groups they belong to -
+    sbrr_plan_text: <span class="muted"> Available on the </span> <b> Forest plan </b>
+    toggle_availability_for_rr: Allow agents to change their availability for automatic ticket assignment
+    info1: Agents
+    new: New Group
+    maximum: Maximum
+    enable: Enable
+    please_confirm: Please confirm...
+    info8_readmore: Read More
+    learn_more: Learn more
+    automatic_assignment: >-
+      <b>To each group</b><br/>Once you’ve created your groups, you can set up
+      rules in dispatch’r to automatically route tickets to each group. <a
+      href="https://support.freshdesk.com/support/solutions/articles/77157"
+      target="_blank">Learn more</a><br/><br/><b> To agents within each
+      group</b><br/>You can also auto-assign tickets to online agents within a
+      group by three methods:<br>1. Round robin - Assign tickets to agents in a
+      circular fashion<br>2. Load balanced - Set a limit on the number of
+      tickets that are assigned to each agent<br>3. Skill based  - Assign
+      tickets to agents based on their expertise <br/> <a
+      href="https://support.freshdesk.com/support/solutions/articles/196581"
+      target="_blank">Read more</a>
+    name: Group Name
+    info5: >-
+      Are you sure you want to delete this group?      Deleting a group will not
+      delete the Agents in it.
+    info4: if a ticket remains un-assigned for more than
+    automatic_assignment_header: Auto-ticket Assignment
+    edit: Edit Group
+    confirm: Confirm
+    alert_content: >-
+      You're being redirected to Skills page. All the changes you've made to
+      this group will be automatically saved if you choose to proceed.
+    round_robin_skill_based_tooltip: >-
+      When there are two agents with the same skill, tickets will be assigned to
+      the agent handling less number of tickets.
+    alert_content_2: Would you like to continue?
+    escalation_rule: Escalation Rule
+    rr_v2_confimation_message: This action cannot be undone. Are you sure you want to proceed?
+    round_robin_skill_based: Skill based ticket assignment
+    toggle_availability_message: >-
+      Admins and supervisors can override an agent's availability from the
+      dashboard
+    title: Groups
+    only_round_robin_description: >-
+      Tickets coming into this group will be automatically assigned to available
+      agents based on <strong>Round robin method</strong>
+    per_agent: per agent
+    round_robin_defalut: Round robin ticket assignment
+    helptext: >-
+      You can organize your agents into specific Groups like “Support” and
+      “Sales”. This lets you easily assign tickets, create specific canned
+      responses, manage workflows and generate group-level reports. Note that an
+      agent can be a member of multiple groups.
+    round_robin_capping: Load balanced ticket assignment
+    no_group_info: You haven’t created any groups.
+    ticket_assignment: Automatic ticket assignment
+    round_robin_skill_based_info: Assign ticket to agents who can handle them the best
+    select_an_agent: Select Agent
+    round_robin_default_info: Assign tickets to agents in a circular fashion
+    send_escalation_to: '....then send escalation email to :'
+    round_robin_capping_info: Limit the number of tickets an agent can handle simultaneously
+    business_calendar: Business Hours
+    working_hours: >-
+      You can associate different business hours to each of these groups based
+      on their working hours. You can group agents by shifts and assign
+      different business hours to each group, or create separate groups for each
+      location that your agents work from.
+    description: Group description
+    sbrr_trial_text: >-
+      Did you know you can assign tickets based on your agents’ skills? <a
+      href="https://support.freshdesk.com/solution/articles/222692"
+      target="_blank">Learn more</a>
+  email_command_preview_to_email: To
+  ticket_field:
+    helpcard:
+      info4_v3: >-
+        If you are in the Estate plan or above, you can have sections with
+        dynamic fields appear based on the option selected in a dropdown field.
+        You can add ticket fields to each section, and associate a section with
+        options in the dropdown field. If you run an e-commerce store, for
+        example, you can have a section open up with a field called 'Reason'
+        when your customer chooses the option 'Replacement'. This way, you can
+        better understand why your customer would like to have a replacement
+        issued. You can create a maximum of two dynamic sections and use them in
+        two custom dropdowns. If you've associated a section with the 'type'
+        field already, you'll be able to add just one more section to the ticket
+        form.
+      title2: Dependent Fields
+      tour: Help me understand ticket fields
+      info_1: >-
+        The ticket form helps capture the data you need from the customer when
+        they submit a ticket. You can customize your Ticket Form to include the
+        right ticket fields for your business, and let your customers and agents
+        fill in the information you need in the format you want. For example, in
+        an e-commerce company, getting a customer's order ID in the ticket form
+        would be very helpful to the agent solving the ticket.
+      title3: Dynamic Fields
+      info2: >-
+        Dependent Fields give you an easy way to create deeper ticket categories
+        and identify the biggest issues that clog your support.  With dependent
+        fields you can organize tickets hierarchically  into categories,
+        subcategories and item affected.
+      title1: Ticket Fields
+      info4_v2: >-
+        If you are in the estate plan or above, you can have dynamic fields that
+        appear based on the option selected in the type field. For every option
+        in the type field, you can create a different section. You can then add
+        more ticket fields to each section. For example, in an ecommerce
+        scenario, when the type is chosen as "Replacement", a section with a
+        field called "Reason" can open up that will collect the reason why
+        customer needs a replacement for the item.
+      skip_mandatory_field:
+        desc: 'When using the API, allow admins to skip the mandatory ticket fields.'
+        title: Skip mandatory fields when using API
+  activations:
+    helpnote3: Please confirm your details and set a password for your account
+    helpnote1: Tell us a little more about you and help us personalize your experience.
+    activate_freshdesk_account: Activate your account
+    admin_consent: >-
+      By clicking on "Activate and Log In", you agree to our <a target="_blank"
+      href="https://www.freshworks.com/terms/"> Terms</a> and acknowledge having
+      read our <a target="_blank"
+      href="https://www.freshworks.com/privacy/">Privacy Policy</a>.
+  no_level_achieved_label: No levels achieved yet.
+  requester_widget:
+    helpcard:
+      info: >-
+        Choose the fields that you want displayed under the requester info
+        section on the ticket page with the requester widget. This way your team
+        can update requester details directly from the ticket page and keep
+        track of the customer details while solving their ticket. <a
+        href="https://support.freshdesk.com/support/solutions/articles/37586-driving-additional-context-with-requestor-info"
+        target="_blank">Learn more</a>
+      title: Customizing requester widget
+  import_note_info: >-
+    Please ensure that the first row has the header information (eg. name, email
+    etc.). The fields in your CSV file, though, can be in any order.
+  downgrade_plan_v2: 'Note: If you downgrade your plan, you might lose some features!'
+  export: Export
+  special_character_exists: Tags cannot contain special characters
+  no_tags: No tags found.
+  save_changes: Save Changes
+  onedrive_attach_from_text: Attach from <b>Onedrive</b>
+  selecting_plan: Selecting...
+  payment_info: Payment information
+  attach_files: Attach files
+  username: Username
+  email_command_del_info_data: >-
+    Tip - Choose a unique delimiter combination of minimum three characters
+    (special characters recommended) that will not conflict the regular email
+    response.
+  reports:
+    scoreboard_title_nav: Leaderboard
+    no_data: No data to display!
+    customer_title: Customer Activity Report
+    select_time_period: Select Time period
+    scoreboard_reports:
+      agent_highest_points: Agents with highest overall points
+      agents_fastest_resolve: Agents who resolve tickets faster
+      valuable_player: Most valuable Player
+      speed_champion: Speed Champion
+      sample_name: Bruce Banner
+      agents_cs_highest: Agents with highest customer satisfaction survey points
+      sharpshooter_title: Sharp Shooters
+      customer_champion: Customer Champion
+    survey_reports:
+      main:
+        time_period: Time Period
+        neutral: Neutral
+        survey_name: Survey name
+        total_responses_v2: Total
+        agent: Agent
+        view_report_by: View by
+        positive: Positive
+        group: Group
+        overall_rating: Rating
+        responses: Responses
+        negative: Negative
+        response_to: Response to
+        no_overview: No data available
+        unanswered: Unanswered
+        overview: Overview
+        fetching_responses: Fetching responses
+        question: Q
+        loading_responses: Loading responses
+        preparing_chart_for: Preparing chart for
+        no_remarks: No responses available
+        answered: Answered
+        all: All
+        all_responses: All Responses
+        rating: Rating
+        deleted_list: DELETED SURVEYS
+        loading_msg: Generating Reports ...
+      back_to: Back to List View
+      list:
+        no_feedback: Nobody has given any feedback during this time.
+      sidebar:
+        filter_by: Satisfaction Views
+        view_report_date: View reports during
+        helptext: >-
+          <b>Why Customer Satisfaction Report ?</b><p>Customer Satisfaction
+          Report gives you a snapshot of the service quality of your customer
+          support agents.<br>The report helps you to understand the happiness
+          quotient of your customers, which is represented as a percentage value
+          (happy, neutral & unhappy) relevant to every support
+          agent.<br><br><b>What more you can do?</b><br><p><ol
+          class='ml15'><li>Filter the report results with respect to Agents,
+          Group or Company</li><li>View reports for a particular
+          timeframe</li></ol></p></p>
+      index:
+        agent_list_loading: Fetching agent list
+      feedbacks:
+        in_response_to: '-- In response to'
+    summary:
+      fcr: First Call Resolution
+      title: Tickets summary
+      received_tickets: Received Tickets
+      resolved_tickets: Resolved Tickets
+      sla_compliance: SLA Compliance
+    timeline_chart_title: Tickets Received vs Resolved
+    discard_changes: Discard changes
+    helpdesk_title: Helpdesk Activity Report
+    date_ranges:
+      yesterday: Yesterday
+      custom: Date Range
+      today: Today
+      last_30_days: Last 30 days
+      last_90_days: Last 90 days
+      last_7_days: Last 7 days
+    livechat:
+      time_period: Time Period
+      chat_type: Chat Type
+      answered_chats: Answered
+      select_widget: Select Widget
+      agent_chat_summary: Agent Chat Summary
+      missed_chats: Missed
+      group: Group
+      filter_close: Close
+      avg_handle_time: Avg Handle Time
+      filter_report: Edit Filter
+      num_of_transfer: Transfers
+      total_chats: Total
+      avg_time_queue: Time in Queue
+      num_of_chats: No of Chats
+      select_chat_type: Select Chat Type
+      generate_summary: Generate
+      widget: Widget
+      filter_by_title: Filtered by
+    generate_button: Generate
+    timesheet_reports:
+      index:
+        select_product: Select Product
+        select_agent: Select Agent
+        select_group: Select Group
+        select_priority: Select Priority
+        select_type: Select Type
+        filter_report: Edit Filter
+        ticket_type: Ticket Type
+        select_billable: Select Billable/Non-Billable
+    select_customer: Select Customer
+    summary_report:
+      avg_1st_response_time: Average First <br> Response Time
+      avg_resolution_time: Average Resolution <br> Time
+      back_to_reports: Back to Reports
+      fcr_percent: FCR %
+      fcr_count: First Contact <br> Resolution
+      tickets_resolved: Tickets <br> Resolved
+      show_report: Show report
+      helptext: >-
+        Statistics calculated in the report are with respect to the number of
+        tickets resolved. <br /> Tickets resolved within SLAs are summarized as
+        &quot;On Time Resolution&quot;. <br /> The &quot;First Contact
+        Resolution&quot; column shows tickets that have been resolved within the
+        first reply.<br /> &quot;Average First Response Time&quot; shows the
+        time elapsed between when the ticket was created and when the agent
+        first replied to it.
+      avg_response_time: Average Response <br> Time
+      on_time_resolution: On Time <br> Resolution
+    time_sheets:
+      billable: Billable Hours
+      pick_columns: Pick columns
+      total_time: Hours Tracked
+      non_billable: Non-Billable Hours
+      time_period: Time Period
+      filter_by_title: Filtered by
+      billable_vs_non_billable: Billable vs Non-billable
+    satisfaction_title: Satisfaction Report
+    helpdesk_activity_title: Helpdesk Activity Report
+    reports_by: Reports by
+    pie_chart_title_prefix: 'Tickets By '
+  import_user_org_text: >-
+    All the Users & Organizations in your Zendesk account will be imported into
+    your current Freshdesk Support Desk account as "Contacts & Companies"
+  portal_key: Portal
+  feedbackwidget_title: Feedback widget
+  agent_info_title: Agent information
+  undo_toggle_tip: Please refresh the page for this setting to take effect
+  customer_import:
+    import_csv: 'Import %{type} from CSV'
+  favicon: Favicon
+  number_of_attachments: ' attachments'
+  feedbackwidget_embed_code_intro: >-
+    Please copy and paste the code below anywhere before the &lt;/body&gt; tag
+    in the html template of your site or every page where you'd like to provide
+    the Freshdesk Support Desk widget.
+  ticket:
+    properties: Ticket Properties
+    reported: reported
+    search_close_text: Close search
+    sort_by: Sorted by
+    submit_ticket: Submit
+    priority: Priority
+    link_tracker:
+      notifier_body: 'Message Content: '
+    via: via
+    add_note: Add note
+    update_done: Done
+    note_form:
+      form_title: Add a Note
+      private_note: 'Add as Private Note, and don''t notify the requester'
+    view_facebook: View on Facebook
+    search_text: Search Articles
+    view_twitter: View on Twitter
+    assigned_agent: Agent
+    created_by: 'Created by:'
+    status: Status
+    ticket_url: Ticket URL
+    action: Action
+    compose:
+      to_address_placeholder: Enter Customer's address
+    available_commands: Available Commands
+    submit_loading: Submitting..
+    source: Source
+    type: Type
+    updating: Updating
+    from: 'From:'
+    view_ticket: View Ticket
+    close_btn_title: Close this ticket
+    thanks_v1: Thank you for your feedback
+    quoted_text:
+      wrote_on: 'On'
+      wrote: wrote
+  trial_plan_name: 'Downgrade trial to %{name}'
+  user:
+    phone_no: Phone number
+    remove_profile_image_confirm: Are you sure you want to delete this Profile Picture?
+    full_name: Full name
+    change_photo: Change photo
+    phone_number: Phone number
+    info1: >-
+      A Profile image of the person, it's best if the picture has the same
+      length and height
+    choose_another_photo: Choose another photo
+    profile_picture: Profile picture
+    remove_photo: Remove photo
+    email: Email
+    industry: Industry
+    ie9_file_change_msg: '%{filename} Save to update profile image'
+    name: Name
+    user_exist_in_freshid: Existing freshworks user! Admins cannot edit Agent' profile information.
+    edit_profile_in_freshid: Agents can edit their profile information in their Freshworks profile.
+    photo: Photo
+    last_name: Last name
+    twitter_id: Twitter
+    add_photo: Add Photo
+    first_name: First name
+    title: Title
+    mobile_phone: Mobile phone
+    work: Work
+    company_name: Company
+    mobile: Mobile
+    job_title: Job title
+    country: Country
+    state: State
+    city: City
+  admin:
+    automation_summary:
+      performer_5: "Field Technician"
+      performer_6: "Field Technician or Requester"
+      add_note_for_field_techician: "Add note and notify field technician"
+      same_service_task: 'On the same service task'
+      field_service_responder_id: "Field Technician"
+      field_service_group_id: "Service Group"
+      action_field_service_group_id: 'Assign to Service Group'
+      action_field_service_responder_id: 'Assign to Field Technician'
+      assigned_field_service_group: 'Assigned Service Group'
+      assigned_field_service_agent: "Assigned Field Technician"
+      send_email_to_field_tech: 'Send Email to Field Technician'
+      send_email_to_field_group: 'Send Email to Service Group'
+      freshservice_incident: 'Create an incident in Freshservice'
+    audit_log:
+      event_type:
+        category: Knowledge Base - Category
+        folder: Knowledge Base - Folder
+        article: Knowledge Base - Article
+        collaborator: Collaborator
+        field_agent: Field Technician
+        support_agent: Agent
+      solution_folder:
+        name: Name
+        description: Description
+        article_order: Ordering
+        visibility: Visibility
+        solution_category_name: Category changed
+        visible_to:
+          all_users: All Users
+          logged_in_users: Logged in users
+          agents: Agents
+          companies: Companies
+          bot: Bot
+          contact_segments: Contact Segments
+          company_segments: Company Segments
+        ordering:
+          manual: Manually
+          alphabetical: Alphabetically (A-Z)
+          created_desc: Creation date (Latest to Oldest)
+          created_asc: Creation date (Oldest to Latest)
+          updated_desc: Modified date (Latest to Oldest)
+      solution_article:
+        title: Title
