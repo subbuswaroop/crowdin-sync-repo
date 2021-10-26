@@ -1,4 +1,4 @@
-name: Share data between jobs
+name: Crowdin JSON Implementation
 
 on:
   workflow_dispatch:
