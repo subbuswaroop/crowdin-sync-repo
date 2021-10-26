@@ -8,3 +8,4 @@ en:
   service_task: Service Task
   export_data:
     thirt_days: Last 30 Days
+    three_days: Last 3 Days
