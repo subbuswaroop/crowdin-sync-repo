@@ -14,13 +14,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0
+          fetch-depth: 1
 
       - name: yq - portable yaml processor
         uses: mikefarah/yq@v4.13.5
         
       - name: Print yaml key
-        working-directory: locales-yml
-        run: yq eval -o=j en.yml
+#         working-directory: locales-yml
+        run: |
+          yq eval -o=j locales-yml/en.yml > yml-to-json.txt
+        
+      - name: Upload git diff artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ymltojson
+          path: yml-to-json.txt
 #         run: cat test.yml | yq e '.en.time.am'
 #         run: echo {{ yq e '.en.time.am' ../locales-json/en.yaml }}
