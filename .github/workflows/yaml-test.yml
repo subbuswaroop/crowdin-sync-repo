@@ -21,6 +21,6 @@ jobs:
         
       - name: Print yaml key
         working-directory: locales-yml
-        run: yq eval -o=j en.yaml
+        run: yq eval -o=j en.yml
 #         run: cat test.yml | yq e '.en.time.am'
 #         run: echo {{ yq e '.en.time.am' ../locales-json/en.yaml }}
