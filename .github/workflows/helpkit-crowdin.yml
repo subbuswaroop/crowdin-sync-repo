@@ -1,0 +1,117 @@
+name: Crowdin YML Implementation
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job_1:
+    name: Git Diff Fetch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout v2
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+        
+      - name: Git actions
+        run: git fetch
+        
+      - name: Git Diff
+        run: |
+          git diff fd4833e5123dc0a30081ca1ab1d8626746dad73d f02a364 -- locales-json/en.json -U0 | grep '^[+]' | grep -Ev '^(--- a/|\+\+\+ b/)' > git-diff.txt
+
+      - name: Upload git diff artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: gitdiff
+          path: git-diff.txt
+
+  job_2:
+    name: Display results
+    needs: job_1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download math result for job 2
+        uses: actions/download-artifact@v2
+        with:
+          name: gitdiff
+
+      - name: Format Query String
+        id: query-string
+        run: |
+          arr1=()
+          queryString=""
+          while IFS= read -r line; do
+            arr1+=($(echo "$line" | grep -o -m1 '".*"' | sed 's/"//g' | cut -d: -f1))
+          done < git-diff.txt
+          for each in "${arr1[@]}"
+          do
+           queryString+="identifier=\".${each}\" or "
+          done
+          output1=$(jq -nRr --arg s "${queryString/%????/}" '$s|@uri')
+          echo "https://api.crowdin.com/api/v2/projects/480641/strings?croql=${output1}"
+          echo ::set-output name=outputvar::$(echo "https://api.crowdin.com/api/v2/projects/480641/strings?croql=${output1}&limit=500")
+          
+      - name: Get All Mathcing Strings From Crowdin
+        id: strings-list
+        uses: satak/webrequest-action@master
+        with:
+          url: ${{ steps.query-string.outputs.outputvar }}
+          method: GET
+          headers: '{"Authorization": "Bearer ${{ secrets.CROWDIN_PERSONAL_TOKEN }}"}'
+          
+      - name: Get crowdin data
+        id: crowdin-data
+        run: |
+          echo ::set-output name=crowdinData::$(echo '${{ steps.strings-list.outputs.output }}' | jq '.data.data')
+
+      - name: Print data
+        run: |
+          for row in $(echo '${{ steps.crowdin-data.outputs.crowdinData }}' | jq -r '.[] | @base64'); do
+            _jq() {
+             echo ${row} | base64 --decode | jq -r ${1}
+            }
+            echo $(_jq '.data.id')
+          done
+  
+#   job_3:
+#     name: Add String comments
+#     runs-on: ubuntu-latest
+#     needs: job_2
+#     steps:
+#       - name: Connect to Crowdin
+#         uses: satak/webrequest-action@master
+#         with:
+#           url: https://api.crowdin.com/api/v2/projects/480641/comments
+#           method: POST
+#           payload: '{"text": "test comment","stringId": 59,"targetLanguageId": "en","type": "comment"}'
+#           headers: '{"Authorization": "Bearer ${{ secrets.CROWDIN_PERSONAL_TOKEN }}"}'
+
+
+#   job_4:
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         node: [ '12', '14', '16' ]
+#     name: Node ${{ matrix.node }} sample
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Setup node
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: ${{ matrix.node }}
+#       - run: npm install
+#       - run: npm test
+#          for each in "${result[@]}"
+#          do
+#           echo "$each" | jq '.data'
+#          done
+#          for each in "${{ steps.crowdin-data.outputs.crowdinData }}"
+#          do
+#            echo "$each"
+#          done
+
+#       - name: Print the final result
+#         shell: bash
+#         run: |
+#           cat git-diff.txt
