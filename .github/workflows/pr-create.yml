@@ -12,7 +12,7 @@ jobs:
           fetch-depth: 0
       - name: Update AUTHORS
         run: |
-          git log --format='%aN <%aE>%n%cN <%cE>' | sort -u > AUTHORS
+          git log --format='%aN <%aE>%n%cN <%cE>' | sort -u > locales-json/en.json
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
