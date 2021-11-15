@@ -72,11 +72,11 @@ const pluralize = (keys) => {
 
     console.log(`Proccessing folder: ${lang}`);
 
-    let files = fs.readdirSync(`${mergeFolderPath}/${lang}`);
+    let files = fs.readdirSync(`${mergeFolderPath}/locales-json/${lang}`);
 
     let [localeFile] = files.filter((file) => !ignorableFiles.includes(file));
     console.log("Locale File:", localeFile);
-    let keys = JSON.parse(fs.readFileSync(`${mergeFolderPath}/${lang}/${localeFile}`, { encoding: 'utf-8' }));
+    let keys = JSON.parse(fs.readFileSync(`${mergeFolderPath}/locales-json/${lang}/${localeFile}`, { encoding: 'utf-8' }));
 
     // pluralize
     console.log(`pluralizing file: ${localeFile}`);
