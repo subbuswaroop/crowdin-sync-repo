@@ -88,8 +88,8 @@ function downloadTranslations(zipURL) {
     console.log('zip download status ', res.status);
     var zipFile = new AdmZip(res.data);
     zipFile.extractAllTo('./tmp');
-    shell.exec('git_home=$(git rev-parse --show-toplevel 2>&1)')
-    shell.exec(`node js/merge_i18n.js $git_home`);
+    // shell.exec('git_home=$(git rev-parse --show-toplevel 2>&1)')
+    shell.exec(`node js/merge_i18n.js`);
   });
 }
 
