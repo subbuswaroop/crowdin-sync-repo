@@ -1,2 +1,4 @@
 diff.txt
 test_script.sh
+node_modules/
+**/tmp
