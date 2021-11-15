@@ -90,6 +90,7 @@ function downloadTranslations(zipURL) {
     zipFile.extractAllTo('./tmp');
     // shell.exec('git_home=$(git rev-parse --show-toplevel 2>&1)')
     shell.exec(`node js/merge_i18n.js`);
+    shell.exec('rm -r tmp')
   });
 }
 

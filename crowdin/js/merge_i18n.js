@@ -88,14 +88,14 @@ const pluralize = (keys) => {
     }
 
     // merge
-    let writePath = `${baseFolderPath}/${code}.json`;
+    let writePath = `${baseFolderPath}/${localeFile}`;
     let fileExists = fs.existsSync(writePath);
     if (!fileExists) {
       console.log(`File not found: ${writePath}`);
       return true;
     }
 
-    fs.writeFileSync(`${baseFolderPath}/${code}.json`, JSON.stringify(pluralizedJSON, null, 4));
+    fs.writeFileSync(`${baseFolderPath}/${localeFile}`, JSON.stringify(pluralizedJSON, null, 4));
     console.log(`Updated file: ${writePath}`);
   });
 })();
