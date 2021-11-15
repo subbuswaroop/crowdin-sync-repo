@@ -61,6 +61,7 @@ const pluralize = (keys) => {
   // let lang = process.argv[2];
 
   let langs = fs.readdirSync(mergeFolderPath);
+  console.log(langs);
   langs.forEach((lang) => {
     console.log('........................');
 
