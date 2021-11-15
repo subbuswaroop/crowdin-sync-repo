@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 // constants
-const basepath = process.argv[2];
+const basepath = process.argv[1];
 console.log(basepath);
 const mergeFolderPath = `${process.cwd()}/tmp`;
 const baseFolderPath = `${basepath}/locales-json`;
