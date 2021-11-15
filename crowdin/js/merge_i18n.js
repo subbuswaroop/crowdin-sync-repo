@@ -1,8 +1,10 @@
 const fs = require('fs');
 
 // constants
+const basepath = process.argv[2];
+console.log(basepath);
 const mergeFolderPath = `${process.cwd()}/tmp`;
-const baseFolderPath = `/Users/smuthusubramanian/Documents/crowdin-sync-repo/locales-json`;
+const baseFolderPath = `${basepath}/locales-json`;
 
 const ignorableFolders = ['en', '.DS_Store'];
 

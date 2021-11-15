@@ -17,4 +17,4 @@ else
     cd ./js && npm install && cd ..
 fi
 
-node js/dummy.js 
+node js/index.js $1 $2

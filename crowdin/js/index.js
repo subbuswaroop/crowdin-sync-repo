@@ -5,10 +5,8 @@ const shell = require('shelljs');
 const BASE_URL = "https://api.crowdin.com/api/v2/projects";
 // const PROJECT_ID = config.PROJECT_ID;
 
-// const CROWDIN_TOKEN = process.argv[3];
-const CROWDIN_TOKEN = "2e6e3de1c20f73b61751dd1a62f8495fc080a93332eb58b23c834f664c17a2859dba93bd9996ae94";
-// const CROWDIN_PROJECT_ID = process.argv[2];
-const CROWDIN_PROJECT_ID = 483057;
+const CROWDIN_TOKEN = process.argv[3];
+const CROWDIN_PROJECT_ID = process.argv[2];
 
 const PROVIDER_CODE = ["es-ES", "ja", "es-MX", "no", "pt", "pt", "ru", "sv"];
 const APP_CODE = ["es", "ja-JP", "es-LA", "nb-NO", "pt-BR", "pt-PT", "ru-RU", "sv-SE"];
@@ -90,7 +88,8 @@ function downloadTranslations(zipURL) {
     console.log('zip download status ', res.status);
     var zipFile = new AdmZip(res.data);
     zipFile.extractAllTo('./tmp');
-    shell.exec(`node js/merge_i18n.js`);
+    shell.exec('git_home=$(git rev-parse --show-toplevel 2>&1)')
+    shell.exec(`node js/merge_i18n.js $git_home`);
   });
 }
 
