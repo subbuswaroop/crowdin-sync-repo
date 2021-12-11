@@ -71,9 +71,11 @@ const mergeTranslations = () => {
 
     console.log(`Proccessing folder: ${lang}`);
 
-    let files = fs.readdirSync(`${mergeFolderPath}/locales-json/${lang}`);
+    // let files = fs.readdirSync(`${mergeFolderPath}/locales-json/${lang}`); // Would need for actual helpkit, helpkit-ember implementation
 
-    let [localeFile] = files.filter((file) => !ignorableFiles.includes(file));
+    let localeFile = fs.readdirSync(`${mergeFolderPath}/locales-json/${lang}`);
+
+    // let [localeFile] = files.filter((file) => !ignorableFiles.includes(file)); // Would need for actual helpkit, helpkit-ember implementation
     console.log("Locale File:", localeFile);
     let keys = JSON.parse(fs.readFileSync(`${mergeFolderPath}/locales-json/${lang}/${localeFile}`, { encoding: 'utf-8' }));
 

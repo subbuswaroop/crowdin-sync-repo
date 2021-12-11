@@ -56,6 +56,7 @@ const getDownloadURL = (buildId) => {
   }).then(response => {
     if(response?.data) {
       zipURL = response.data.data.url;
+      // console.log(zipURL);
       downloadTranslations(zipURL);
     }
   }).catch(err=> {
