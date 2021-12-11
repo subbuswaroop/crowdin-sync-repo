@@ -3,9 +3,7 @@ import AdmZip from 'adm-zip';
 import shell from 'shelljs';
 import mergeTranslations from './merge_i18n_new.js';
 
-// const [, , CROWDIN_PROJECT_ID, CROWDIN_TOKEN] = process.argv;
-const CROWDIN_TOKEN = "a755a1bd2e49947f4ce66a74e54c17b1d4b2d262b8c3b71e279660dfb38609d8264489e0c0356eb7";
-const CROWDIN_PROJECT_ID = 489071;
+const [, , CROWDIN_PROJECT_ID, CROWDIN_TOKEN] = process.argv;
 const BASE_URL = `https://api.crowdin.com/api/v2/projects/${CROWDIN_PROJECT_ID}/translations/builds`;
 
 let checkBuilStatusInterval;
@@ -36,12 +34,12 @@ const buildTranslations = () => {
   console.log("Building Translations...");
   console.log(CROWDIN_PROJECT_ID);
   console.log(BASE_URL);
-  return axios.post(BASE_URL, {
+  return axios.post(BASE_URL, {}, {
     headers: HEADERS,
-    data: {},
   }).then(response=> {
     if(response.data && response.data.data) {
       let buildId = response.data.data.id;
+      console.log(buildId);
       // The build process usually takes more than a minute due to large number of keys. So, we are only proceeding
       // to the next step if this build finishes. Until then, we check the status every 30 seconds
       checkBuilStatusInterval = setInterval(checkBuildStatus, 30000, buildId);
