@@ -3,7 +3,9 @@ import AdmZip from 'adm-zip';
 import shell from 'shelljs';
 import mergeTranslations from './merge_i18n_new.js';
 
-const [, , CROWDIN_PROJECT_ID, CROWDIN_TOKEN] = process.argv;
+// const [, , CROWDIN_PROJECT_ID, CROWDIN_TOKEN] = process.argv;
+const CROWDIN_TOKEN = "a755a1bd2e49947f4ce66a74e54c17b1d4b2d262b8c3b71e279660dfb38609d8264489e0c0356eb7";
+const CROWDIN_PROJECT_ID = 489071;
 const BASE_URL = `https://api.crowdin.com/api/v2/projects/${CROWDIN_PROJECT_ID}/translations/builds`;
 
 let checkBuilStatusInterval;
@@ -11,10 +13,8 @@ const HEADERS = { 'Authorization': `Bearer ${CROWDIN_TOKEN}` };
 
 const checkBuildStatus = (buildId) => {
   console.log("Checking Build Status...");
-
-  return axios.get({
+  return axios.get(`${BASE_URL}/${buildId}`,{
     headers: HEADERS,
-    url: `${BASE_URL}/${buildId}`
   }).then(response=> {
     if(response.data?.data) {
       const status = response.data.data.status;
@@ -36,10 +36,9 @@ const buildTranslations = () => {
   console.log("Building Translations...");
   console.log(CROWDIN_PROJECT_ID);
   console.log(BASE_URL);
-  return axios.post({
+  return axios.post(BASE_URL, {
     headers: HEADERS,
     data: {},
-    url: BASE_URL
   }).then(response=> {
     if(response.data && response.data.data) {
       let buildId = response.data.data.id;
@@ -54,9 +53,8 @@ const getDownloadURL = (buildId) => {
   console.log("Fetching zip download url...");
   let zipURL = "";
 
-  axios.get({
-    headers: HEADERS,
-    url: `${BASE_URL}/${buildId}/download`
+  axios.get(`${BASE_URL}/${buildId}/download`, {
+    headers: HEADERS
   }).then(response => {
     if(response?.data) {
       zipURL = response.data.data.url;
