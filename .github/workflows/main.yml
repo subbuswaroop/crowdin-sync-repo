@@ -23,13 +23,90 @@ jobs:
       - name: crowdin action
         uses: crowdin/github-action@1.4.0
         with:
-#           upload_sources: true
-          download_translations: true
-          localization_branch_name: 'translations_branch'
+          upload_sources: true
+          # download_translations: true
+          # localization_branch_name: 'translations_branch'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+
+  send-email-to-stakeholders:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Get current PR
+        uses: 8BitJonny/gh-get-current-pr@1.3.0
+        id: PR
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          sha: ${{ github.event.pull_request.head.sha }}
+      
+      - name: Get File Diff
+        uses: technote-space/get-diff-action@v5
+        run: |
+          echo "Newly added fields" >> diff-text.txt
+          git diff ${{ github.event.before }} ${{ github.sha }} -- en-us.json -U0 | { grep '^[+]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> diff-text.txt
+
+      - name: upload git diff to artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: difftext
+          path: diff-text.txt
+
+      - name: Get PR Screenshot
+      - shell: bash
+        run: |  
+          echo "${{ steps.PR.outputs.pr_body }}" | sed -e 's/|/\\|/g' > pr-details-for-screenshot.txt
+          grep http ./pr-details-for-screenshot.txt | sed 's/http/\nhttp/g' | grep ^http | sed 's/\(^http[^ <]*\)\(.*\)/\1/g' | sort -u > pr-details-for-screenshot.txt
+        
+      - name: Download the diff text artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: difftext
+
+      - name: iterate screenshot file
+        run: |
+            i=1
+            while read p; do
+              url=$(echo $p | tr -d '>' | tr -d $'\r' | tr -d ')')
+              if [[ $url =~ "images" ]]; then
+                curl "$url" -o artifacts/screenshot${i}.png
+                i=$((i+1))
+              fi
+            done < pr-details-for-screenshot.txt
+
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          # Required mail server address:
+          server_address: smtp.gmail.com
+          # Required mail server port:
+          server_port: 465
+          # Optional (recommended): mail server username:
+          username: ${{secrets.MAIL_USERNAME}}
+          # Optional (recommended) mail server password:
+          password: ${{secrets.MAIL_PASSWORD}}
+          # Required mail subject:
+          subject: new screenshot download test
+          # Required recipients' addresses:
+          to: dragonsubbu@gmail.com
+          # Required sender full name (address can be skipped):
+          from: <dragonsubbu@gmail.com> # <user@example.com>
+          # Optional whether this connection use TLS (default is true if server_port is 465)
+          secure: true
+          body: new screenshot download test
+          html_body: new screenshot download test
+          cc: dragonsubbu@gmail.com
+          bcc: dragonsubbu@gmail.com
+          reply_to: dragonsubbu@gmail.com
+          in_reply_to: <dragonsubbu@gmail.com>
+          ignore_cert: true
+          convert_markdown: true
+          attachments: artifacts/*.png, diff-text.txt
+          priority: low
           
 #       - name: Set SHA
 #         id: commit-sha
