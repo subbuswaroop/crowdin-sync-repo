@@ -60,7 +60,7 @@ const mergeTranslations = () => {
 
   // let lang = process.argv[2];
 
-  let langs = fs.readdirSync(mergeFolderPath);
+  let langs = fs.readdirSync(`${mergeFolderPath}/locales-json`);
   langs.forEach((lang) => {
     console.log('........................');
 
@@ -71,10 +71,11 @@ const mergeTranslations = () => {
 
     console.log(`Proccessing folder: ${lang}`);
 
-    let files = fs.readdirSync(`${mergeFolderPath}/${lang}`);
+    let files = fs.readdirSync(`${mergeFolderPath}/locales-json/${lang}`);
 
     let [localeFile] = files.filter((file) => !ignorableFiles.includes(file));
-    let keys = JSON.parse(fs.readFileSync(`${mergeFolderPath}/${lang}/${localeFile}`, { encoding: 'utf-8' }));
+    console.log("Locale File:", localeFile);
+    let keys = JSON.parse(fs.readFileSync(`${mergeFolderPath}/locales-json/${lang}/${localeFile}`, { encoding: 'utf-8' }));
 
     // pluralize
     console.log(`pluralizing file: ${localeFile}`);
@@ -87,14 +88,14 @@ const mergeTranslations = () => {
     }
 
     // merge
-    let writePath = `${baseFolderPath}/${code}.json`;
+    let writePath = `${baseFolderPath}/${localeFile}`;
     let fileExists = fs.existsSync(writePath);
     if (!fileExists) {
       console.log(`File not found: ${writePath}`);
       return true;
     }
 
-    fs.writeFileSync(`${baseFolderPath}/${code}.json`, JSON.stringify(pluralizedJSON, null, 4));
+    fs.writeFileSync(`${baseFolderPath}/${localeFile}`, JSON.stringify(pluralizedJSON, null, 4));
     console.log(`Updated file: ${writePath}`);
   });
 };
