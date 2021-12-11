@@ -38,5 +38,16 @@
     "fd.contact.first_name": "First name",
     "fd.contact.last_name": "Last name",
     "fd.contact.email": "Email",
-    "fd.contact.phone": "Phone"
+    "fd.contact.phone": "Phone",
+    "fd.are_you_sure": "Are you sure you want to,",
+    "fd.proceed": "Proceed anyway",
+    "fd.would_you_like": "Would you like to,",
+    "fd.new_entity": "New {{entity}}",
+    "fd.delete_confirmation": "Are you sure you want to delete this {{entity}}?",
+    "fd.delete_confirmation_title": "Delete {{entity}}",
+    "fd.delete_success": "Successfully deleted {{entity}}.",
+    "fd.delete_failure": "Deleting {{entity}} failed.",
+    "fd.save_success": "Successfully saved {{entity}}.",
+    "fd.save_success.plain": "{{entity}} saved.",
+    "fd.save_failure": "Saving {{entity}} failed."
 }
