@@ -34,5 +34,11 @@
     "fd.delete_failure": "Deleting {{entity}} failed.",
     "fd.save_success": "Successfully saved {{entity}}.",
     "fd.save_success.plain": "{{entity}} saved.",
-    "fd.save_failure": "Saving {{entity}} failed."
+    "fd.save_failure": "Saving {{entity}} failed.",
+    "after.min.other": "After {{count}} minutes",
+    "after.hour.one": "After {{count}} hour",
+    "after.hour.other": "After {{count}} hours",
+    "after.day.one": "After {{count}} day",
+    "after.day.other": "After {{count}} days",
+    "after.week.one": "After {{count}} week"
 }
