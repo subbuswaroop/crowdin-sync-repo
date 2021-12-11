@@ -18,7 +18,7 @@ jobs:
 
       - name: Run Scripts
         shell: bash
-        working-directory: script/crowdin
+        working-directory: crowdin
         run: |
           cd ./js && npm install && cd ..
           node js/index.js ${{ secrets.CROWDIN_PROJECT_ID }} ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
