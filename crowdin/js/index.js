@@ -1,7 +1,7 @@
-const axios = require('axios').default;
-const AdmZip = require("adm-zip");
-const shell = require('shelljs');
-import mergeTranslations from './merge_i18n_new';
+import axios from 'axios';
+import AdmZip from 'adm-zip';
+import shell from 'shelljs';
+import mergeTranslations from './merge_i18n_new.js';
 
 const [, , CROWDIN_PROJECT_ID, CROWDIN_TOKEN] = process.argv;
 const BASE_URL = `https://api.crowdin.com/api/v2/projects/${CROWDIN_PROJECT_ID}/translations/builds`;

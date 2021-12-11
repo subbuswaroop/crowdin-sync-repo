@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 
 // constants
 const mergeFolderPath = `${process.cwd()}/tmp`;
@@ -58,7 +58,7 @@ const mergeTranslations = () => {
   console.log(`🏁 Starting merge with: ${mergeFolderPath}`);
   console.log(`🎯 Targetted merge: ${baseFolderPath}`);
 
-  // let lang = process.argv[2];
+  let lang = process.argv[2];
 
   let langs = fs.readdirSync(`${mergeFolderPath}/locales-json`);
   langs.forEach((lang) => {
@@ -100,4 +100,4 @@ const mergeTranslations = () => {
   });
 };
 
-module.exports = mergeTranslations;
+export default mergeTranslations;

@@ -2,6 +2,7 @@
   "name": "crowdin_automation_helpkit_ember",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "license": "MIT",
   "dependencies": {
     "axios": "0.22.0",
