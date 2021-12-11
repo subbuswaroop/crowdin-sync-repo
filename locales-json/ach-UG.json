@@ -12,8 +12,8 @@
     "fd.portal": "انقر",
     "fd.forum": "انقر",
     "fd.outbound_email": "انقر",
-    "common.copy.success": "Copied!",
-    "fd.emailtemplate": "Email template",
+    "common.copy.success": "تم النسخ!",
+    "fd.emailtemplate": "قالب البريد الإلكتروني",
     "fd.createmenu": "Create menu",
     "common.success": "Success"
 }
