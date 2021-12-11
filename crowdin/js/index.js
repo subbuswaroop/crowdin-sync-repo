@@ -34,7 +34,8 @@ const checkBuildStatus = (buildId) => {
 
 const buildTranslations = () => {
   console.log("Building Translations...");
-
+  console.log(CROWDIN_PROJECT_ID);
+  console.log(BASE_URL);
   return axios.post({
     headers: HEADERS,
     data: {},
