@@ -26,5 +26,12 @@
     "fd.viewfile": "View file",
     "fd.learn_more": "Learn more",
     "fd.load_more": "Load more",
-    "fd.select_ticket": "Select a ticket"
+    "fd.select_ticket": "Select a ticket",
+    "fd.verified": "Verified",
+    "fd.unsaved_data_loss": "You have unsaved changes and your data will be lost. Are you sure you want to continue?",
+    "fd.confirm_continue": "Do you want to continue?",
+    "fd.calendarHours": "Calendar hours",
+    "fd.businessHours": "Business hours",
+    "fd.target": "target",
+    "fd.choose.entity": "Choose {{entity}}"
 }
