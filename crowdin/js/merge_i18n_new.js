@@ -73,11 +73,13 @@ const mergeTranslations = () => {
 
     // let files = fs.readdirSync(`${mergeFolderPath}/locales-json/${lang}`); // Would need for actual helpkit, helpkit-ember implementation
 
-    let localeFile = fs.readdirSync(`${mergeFolderPath}/locales-json/${lang}`);
+    // let localeFile = fs.readdirSync(`${mergeFolderPath}/locales-json/${lang}`);
+
+    let localeFile = `locales-json/${lang}`;
 
     // let [localeFile] = files.filter((file) => !ignorableFiles.includes(file)); // Would need for actual helpkit, helpkit-ember implementation
     console.log("Locale File:", localeFile);
-    let keys = JSON.parse(fs.readFileSync(`${mergeFolderPath}/locales-json/${lang}/${localeFile}`, { encoding: 'utf-8' }));
+    let keys = JSON.parse(fs.readFileSync(`${mergeFolderPath}/${localeFile}`, { encoding: 'utf-8' }));
 
     // pluralize
     console.log(`pluralizing file: ${localeFile}`);
