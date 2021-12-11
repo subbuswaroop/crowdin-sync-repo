@@ -21,7 +21,7 @@ jobs:
         working-directory: crowdin
         run: |
           cd ./js && npm install && cd ..
-          node js/index.js ${{ secrets.CROWDIN_PROJECT_ID }} ${{ secrets.CROWDIN_PERSONAL_TOKEN }} && cd ..
+          node js/index.js ${{ secrets.CROWDIN_PROJECT_ID }} ${{ secrets.CROWDIN_PERSONAL_TOKEN }} && rm ./js/package-lock.json
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
