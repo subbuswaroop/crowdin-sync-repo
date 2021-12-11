@@ -22,5 +22,9 @@
     "fd.reset": "Reset",
     "fd.filter": "Filters",
     "form.update": "Update",
-    "form.updating": "Updating..."
+    "form.updating": "Updating...",
+    "fd.viewfile": "View file",
+    "fd.learn_more": "Learn more",
+    "fd.load_more": "Load more",
+    "fd.select_ticket": "Select a ticket"
 }
