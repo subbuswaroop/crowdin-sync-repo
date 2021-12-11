@@ -11,10 +11,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set Node.js 10.13.0
-        uses: actions/setup-node@master
+      - name: Set Node.js
+        uses: actions/setup-node@v2
         with:
-          node-version: 10.13.0
+          node-version: '16'
 
       - name: Run Scripts
         shell: bash
