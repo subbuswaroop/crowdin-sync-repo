@@ -11,12 +11,25 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Script data
+      - name: Set Node.js 10.13.0
+        uses: actions/setup-node@master
+        with:
+          node-version: 10.13.0
+
+      - name: Run Scripts
         shell: bash
-        working-directory: crowdin
+        working-directory: script/crowdin
         run: |
-           chmod +x crowdin_init.sh
-           ./crowdin_init.sh ${{ secrets.CROWDIN_PROJECT_ID }} ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+          cd ./js && npm install && cd ..
+          node js/index.js ${{ secrets.CROWDIN_PROJECT_ID }} ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+
+      # - name: Script data
+      #   shell: bash
+      #   working-directory: crowdin
+      #   run: |
+      #      chmod +x crowdin_init.sh
+      #      ./crowdin_init.sh ${{ secrets.CROWDIN_PROJECT_ID }} ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
