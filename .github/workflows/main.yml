@@ -83,17 +83,17 @@ jobs:
           # Required mail subject:
           subject: new screenshot download test
           # Required recipients' addresses:
-          to: tester101r81@gmail.com
+          to: dragonsubbu@gmail.com
           # Required sender full name (address can be skipped):
-          from: Testser # <user@example.com>
+          from: <kcetkodaiboys@gmail.com> # <user@example.com>
           # Optional whether this connection use TLS (default is true if server_port is 465)
           secure: true
           body: new screenshot download test
           html_body: new screenshot download test
-          cc: tester101r81@gmail.com
-          bcc: tester101r81@gmail.com
-          reply_to: tester101r81@gmail.com
-          in_reply_to: <tester101r81@gmail.com>
+          cc: dragonsubbu@gmail.com
+          bcc: dragonsubbu@gmail.com
+          reply_to: dragonsubbu@gmail.com
+          in_reply_to: <dragonsubbu@gmail.com>
           ignore_cert: true
           convert_markdown: true
           attachments: artifacts/*.png, diff-text.txt
