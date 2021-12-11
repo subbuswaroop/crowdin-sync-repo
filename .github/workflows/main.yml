@@ -1,4 +1,4 @@
-name: dumy workflow
+name: upload source workflow
 on:
   push:
     branches: [ main ]
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  dummy-workflow:
+  upload-sources-workflow:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -23,7 +23,7 @@ jobs:
       - name: crowdin action
         uses: crowdin/github-action@1.4.0
         with:
-          upload_sources: true
+#           upload_sources: true
           download_translations: true
           localization_branch_name: 'translations_branch'
         env:
