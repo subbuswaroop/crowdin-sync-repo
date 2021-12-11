@@ -1,0 +1,19 @@
+{
+    "fd.categories": "الفئات",
+    "fd.helpdesk": "مكتب الدعم",
+    "fd.customers": "جهات الاتصا",
+    "fd.dashboard": "لوحة المعلومات",
+    "fd.tickets": "التذاكر",
+    "fd.click_here": "انقر",
+    "fd.emoji": "انقر",
+    "fd.seconds": "انقر",
+    "fd.social": "انقر",
+    "fd.forums": "انقر",
+    "fd.portal": "انقر",
+    "fd.forum": "انقر",
+    "fd.outbound_email": "انقر",
+    "common.copy.success": "Copied!",
+    "fd.emailtemplate": "Email template",
+    "fd.createmenu": "Create menu",
+    "common.success": "Success"
+}
