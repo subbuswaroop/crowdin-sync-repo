@@ -45,6 +45,7 @@ jobs:
           sha: ${{ github.event.pull_request.head.sha }}
       
       - name: Get File Diff
+        shell: bash
         run: |
           echo "Newly added fields" >> diff-text.txt
           git diff ${{ github.event.before }} ${{ github.sha }} -- en-us.json -U0 | { grep '^[+]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> diff-text.txt
@@ -67,6 +68,7 @@ jobs:
           name: difftext
 
       - name: iterate screenshot file
+        shell: bash
         run: |
             i=1
             while read p; do
