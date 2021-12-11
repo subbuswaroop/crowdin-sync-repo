@@ -42,8 +42,8 @@ const buildTranslations = () => {
       console.log(buildId);
       // The build process usually takes more than a minute due to large number of keys. So, we are only proceeding
       // to the next step if this build finishes. Until then, we check the status every 30 seconds
-      // checkBuilStatusInterval = setInterval(checkBuildStatus, 30000, buildId);
-      getDownloadURL(buildId);
+      checkBuilStatusInterval = setInterval(checkBuildStatus, 5000, buildId);
+      // getDownloadURL(buildId);
     }
   })
 }
