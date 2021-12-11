@@ -33,5 +33,10 @@
     "fd.calendarHours": "Calendar hours",
     "fd.businessHours": "Business hours",
     "fd.target": "target",
-    "fd.choose.entity": "Choose {{entity}}"
+    "fd.choose.entity": "Choose {{entity}}",
+    "fd.deactivate": "Deactivate",
+    "fd.contact.first_name": "First name",
+    "fd.contact.last_name": "Last name",
+    "fd.contact.email": "Email",
+    "fd.contact.phone": "Phone"
 }
