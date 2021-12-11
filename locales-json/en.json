@@ -15,5 +15,12 @@
     "common.copy.success": "Copied!",
     "fd.emailtemplate": "Email template",
     "fd.createmenu": "Create menu",
-    "common.success": "Success"
+    "common.success": "Success",
+    "fd.mandatoryinfo" : "of these fields is mandatory",
+    "fd.meta": "META",
+    "fd.apply": "Apply",
+    "fd.reset": "Reset",
+    "fd.filter": "Filters",
+    "form.update": "Update",
+    "form.updating": "Updating..."
 }
