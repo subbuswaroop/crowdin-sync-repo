@@ -9,9 +9,8 @@
     "form.update": "Update",
     "form.updating": "Updating...",
     "fd.viewfile": "View file",
-    "fd.learn_more": "Learn more",
     "fd.load_more": "Load more",
-    "fd.select_ticket": "Select a ticket modified again",
+    "fd.select_ticket": "Select a ticket modified again and again",
     "fd.unsaved_data_loss": "You have unsaved changes and your data will be lost. Are you sure you want to continue?",
     "fd.confirm_continue": "Do you want to continue?",
     "fd.calendarHours": "Calendar hours",
@@ -42,6 +41,7 @@
     "fd.industry.shopping-retail": "Shopping and Retail",
     "fd.industry.travel-transportation": "Travel and Transportation",
     "fd.industry.restaurant": "Restaurant",
+    "fd.onboarding.explore.dashboards.title": "Dashboards",
     "fd.search": "search",
     "fd.searchPreferences": "Search preferences"
 }
