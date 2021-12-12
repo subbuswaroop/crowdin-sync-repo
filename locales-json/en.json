@@ -11,7 +11,7 @@
     "fd.viewfile": "View file",
     "fd.learn_more": "Learn more",
     "fd.load_more": "Load more",
-    "fd.select_ticket": "Select a ticket",
+    "fd.select_ticket": "Select a ticket modified",
     "fd.verified": "Verified",
     "fd.unsaved_data_loss": "You have unsaved changes and your data will be lost. Are you sure you want to continue?",
     "fd.confirm_continue": "Do you want to continue?",
@@ -24,10 +24,6 @@
     "fd.contact.last_name": "Last name",
     "fd.contact.email": "Email",
     "fd.contact.phone": "Phone",
-    "fd.are_you_sure": "Are you sure you want to,",
-    "fd.proceed": "Proceed anyway",
-    "fd.would_you_like": "Would you like to,",
-    "fd.new_entity": "New {{entity}}",
     "fd.delete_confirmation": "Are you sure you want to delete this {{entity}}?",
     "fd.delete_confirmation_title": "Delete {{entity}}",
     "fd.delete_success": "Successfully deleted {{entity}}.",
@@ -40,5 +36,12 @@
     "after.hour.other": "After {{count}} hours",
     "after.day.one": "After {{count}} day",
     "after.day.other": "After {{count}} days",
-    "after.week.one": "After {{count}} week"
+    "after.week.one": "After {{count}} week",
+    "fd.industry.non-profit": "Non-profit",
+    "fd.industry.professional-services": "Professional Services",
+    "fd.industry.shopping-retail": "Shopping and Retail",
+    "fd.industry.travel-transportation": "Travel and Transportation",
+    "fd.industry.restaurant": "Restaurant",
+    "fd.search": "search",
+    "fd.searchPreferences": "Search preferences"
 }
