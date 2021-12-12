@@ -43,7 +43,10 @@ jobs:
       - uses: technote-space/get-diff-action@v5
       - run: |
           echo "Newly added fields" >> diff-text.txt
-          git diff ${{ github.event.before }} ${{ github.sha }} -- locales-json/en.json -U0 | { grep '^[+]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> diff-text.txt
+          git diff ${{ github.event.before }} ${{ github.sha }} -- locales/en.json -U0 | { grep '^[+]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> diff-text.txt
+      - run: |
+          echo "Removed fields (if any)" >> diff-text.txt
+          git diff ${{ github.event.before }} ${{ github.sha }} -- locales/en.json -U0 | { grep '^[-]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> diff-text.txt
       - name: upload git diff to artifact
         uses: actions/upload-artifact@v2
         with:
