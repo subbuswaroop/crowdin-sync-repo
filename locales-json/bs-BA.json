@@ -1,7 +1,7 @@
 {
     "fd.categories": "kategorije",
-    "fd.helpdesk": "Helpdesk Edited",
     "fd.tickets": "Tickets Edited",
-    "fd.onboarding.explore.dashboards.title": "Kontrolne table",
-    "fd.support-email.video.title": "Set up your support email"
+    "fd.onboarding.explore.dashboards.title": "Dashboards Edited",
+    "fd.support-email.video.title": "Set up your support email",
+    "fd.test": "Testing"
 }
