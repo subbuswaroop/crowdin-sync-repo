@@ -1,7 +1,7 @@
 {
     "fd.categories": "categories",
-    "fd.helpdesk":"Helpdesk",
+    "fd.helpdesk":"Helpdesk Edited",
     "fd.customers":"Contacts",
-    "fd.dashboard":"Dashboard",
-    "fd.tickets":"Tickets"
+    "fd.tickets":"Tickets",
+    "fd.onboarding.explore.dashboards.title": "Dashboards"
 }
