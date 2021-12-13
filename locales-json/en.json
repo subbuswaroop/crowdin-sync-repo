@@ -1,7 +1,7 @@
 {
     "fd.categories": "categories",
     "fd.helpdesk":"Helpdesk Edited",
-    "fd.customers":"Contacts",
-    "fd.tickets":"Tickets",
-    "fd.onboarding.explore.dashboards.title": "Dashboards"
+    "fd.tickets":"Tickets Edited",
+    "fd.onboarding.explore.dashboards.title": "Dashboards",
+    "fd.support-email.video.title": "Set up your support email"
 }
