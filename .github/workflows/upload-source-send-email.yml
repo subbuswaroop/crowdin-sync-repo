@@ -42,10 +42,10 @@ jobs:
           sha: ${{ github.event.pull_request.head.sha }}
       - uses: technote-space/get-diff-action@v5
       - run: |
-          echo "Newly added fields" >> diff-text.txt
+          echo "Newly added keys" >> diff-text.txt
           git diff ${{ github.event.before }} ${{ github.sha }} -- locales-json/en.json -U0 | { grep '^[+]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> diff-text.txt
       - run: |
-          echo "Removed fields (if any)" >> diff-text.txt
+          echo "Removed keys (if any)" >> diff-text.txt
           git diff ${{ github.event.before }} ${{ github.sha }} -- locales-json/en.json -U0 | { grep '^[-]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> diff-text.txt
       - name: upload git diff to artifact
         uses: actions/upload-artifact@v2
@@ -86,17 +86,17 @@ jobs:
           # Required mail subject:
           subject: new screenshot download test
           # Required recipients' addresses:
-          to: dragonsubbu@gmail.com
+          to: githubcrowdin@gmail.com
           # Required sender full name (address can be skipped):
-          from: <kcetkodaiboys@gmail.com> # <user@example.com>
+          from: <githubcrowdin@gmail.com> # <user@example.com>
           # Optional whether this connection use TLS (default is true if server_port is 465)
           secure: true
           body: new screenshot download test
           html_body: new screenshot download test
-          cc: dragonsubbu@gmail.com
-          bcc: dragonsubbu@gmail.com
-          reply_to: dragonsubbu@gmail.com
-          in_reply_to: <dragonsubbu@gmail.com>
+          cc: githubcrowdin@gmail.com
+          bcc: githubcrowdin@gmail.com
+          reply_to: githubcrowdin@gmail.com
+          in_reply_to: <githubcrowdin@gmail.com>
           ignore_cert: true
           convert_markdown: true
           attachments: artifacts/*.png, diff-text.txt
