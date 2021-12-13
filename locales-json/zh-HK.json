@@ -1,19 +1,7 @@
 {
     "fd.categories": "categories",
-    "fd.helpdesk": "点击此处",
-    "fd.customers": "表情符号",
-    "fd.dashboard": "开始日期",
-    "fd.tickets": "Tickets",
-    "fd.click_here": "咨询专家",
-    "fd.emoji": "重新排序规则",
-    "fd.seconds": "Seconds",
-    "fd.social": "Social",
-    "fd.forums": "Forums",
-    "fd.portal": "Portal",
-    "fd.forum": "Forum",
-    "fd.outbound_email": "Outbound Email",
-    "common.copy.success": "Copied!",
-    "fd.emailtemplate": "Email template",
-    "fd.createmenu": "Create menu",
-    "common.success": "Success"
+    "fd.helpdesk": "Helpdesk Edited",
+    "fd.tickets": "Tickets Edited",
+    "fd.onboarding.explore.dashboards.title": "Dashboards",
+    "fd.support-email.video.title": "Set up your support email"
 }
