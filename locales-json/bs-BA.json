@@ -1,19 +1,7 @@
 {
-    "fd.categories": "categories",
-    "fd.helpdesk": "Helpdesk",
-    "fd.customers": "Contacts",
-    "fd.dashboard": "Dashboard",
-    "fd.tickets": "Tickets",
-    "fd.click_here": "Click here",
-    "fd.emoji": "Emoji",
-    "fd.seconds": "Seconds",
-    "fd.social": "Social",
-    "fd.forums": "Forums",
-    "fd.portal": "Portal",
-    "fd.forum": "Forum",
-    "fd.outbound_email": "Outbound Email",
-    "common.copy.success": "Copied!",
-    "fd.emailtemplate": "Email template",
-    "fd.createmenu": "Create menu",
-    "common.success": "Success"
+    "fd.categories": "kategorije",
+    "fd.helpdesk": "Helpdesk Edited",
+    "fd.tickets": "Tickets Edited",
+    "fd.onboarding.explore.dashboards.title": "Kontrolne table",
+    "fd.support-email.video.title": "Set up your support email"
 }

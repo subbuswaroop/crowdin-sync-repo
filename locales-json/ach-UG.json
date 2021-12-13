@@ -1,19 +1,7 @@
 {
     "fd.categories": "الفئات",
-    "fd.helpdesk": "مكتب الدعم",
-    "fd.customers": "جهات الاتصا",
-    "fd.dashboard": "لوحة المعلومات",
-    "fd.tickets": "التذاكر",
-    "fd.click_here": "انقر",
-    "fd.emoji": "انقر",
-    "fd.seconds": "انقر",
-    "fd.social": "انقر",
-    "fd.forums": "انقر",
-    "fd.portal": "انقر",
-    "fd.forum": "انقر",
-    "fd.outbound_email": "انقر",
-    "common.copy.success": "تم النسخ!",
-    "fd.emailtemplate": "قالب البريد الإلكتروني",
-    "fd.createmenu": "إنشاء قائمة",
-    "common.success": "إلكتروني"
+    "fd.helpdesk": "Helpdesk Edited",
+    "fd.tickets": "Tickets Edited",
+    "fd.onboarding.explore.dashboards.title": "Dashboards",
+    "fd.support-email.video.title": "Set up your support email"
 }
