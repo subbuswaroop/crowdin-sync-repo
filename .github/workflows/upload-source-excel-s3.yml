@@ -16,11 +16,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v10
-
-      - name: crowdin action
+      - name: Push to Crowdin
         uses: crowdin/github-action@1.4.0
         with:
           upload_sources: true
@@ -32,41 +28,55 @@ jobs:
   upload-to-excel-workflow:
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v2
-        - uses: 8BitJonny/gh-get-current-pr@1.3.0
+        - name: Checkout
+          uses: actions/checkout@v2
+
+        - name: Get current PR
+          uses: 8BitJonny/gh-get-current-pr@1.3.0
           id: PR
           with:
             github-token: ${{ secrets.GITHUB_TOKEN }}
             sha: ${{ github.event.pull_request.head.sha }}
-        - uses: technote-space/get-diff-action@v5
-        - run: |
+
+        - name: Get Diff Action          
+          uses: technote-space/get-diff-action@v5
+        
+        - name: Get Newly Added/Modified Keys
+          run: |
             echo "Newly added fields" >> diff-text.txt
             git diff ${{ github.event.before }} ${{ github.sha }} -- locales-json/en.json -U0 | { grep '^[+]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> diff-text.txt
             git diff ${{ github.event.before }} ${{ github.sha }} -- locales-json/en.json -U0 | { grep '^[+]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> new-changes.json
-        - run: |
+        
+        - name: Get Removed keys
+          run: |
             echo "Removed fields (if any)" >> diff-text.txt
             git diff ${{ github.event.before }} ${{ github.sha }} -- locales-json/en.json -U0 | { grep '^[-]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> diff-text.txt
             git diff ${{ github.event.before }} ${{ github.sha }} -- locales-json/en.json -U0 | { grep '^[-]' || true; } | { grep -Ev '^(--- a/|\+\+\+ b/)' || true; } >> removed-changes.json
-        - shell: bash
-          run: |  
-            echo "${{ steps.PR.outputs.pr_body }}" | sed -e 's/|/\\|/g' > pr-details-for-screenshot.txt   
-        - shell: bash
+
+        - name: Get Screenshots
+          shell: bash
           run: |
+            echo "${{ steps.PR.outputs.pr_body }}" | sed -e 's/|/\\|/g' > pr-details-for-screenshot.txt
             if grep -q "images" pr-details-for-screenshot.txt; then
               grep http ./pr-details-for-screenshot.txt | sed 's/http/\nhttp/g' | { grep ^http || true; } | sed 's/\(^http[^ <]*\)\(.*\)/\1/g' > pr-details-for-screenshot.txt
             fi
-        - name: upload git diff to artifact
+
+        - name: Upload git diff to artifact
           uses: actions/upload-artifact@v2
           with:
             name: screenshot
             path: pr-details-for-screenshot.txt
+            retention-days: 3
+
         - name: Download the diff text artifact
           uses: actions/download-artifact@v2
           with:
             name: screenshot
-        - name: get Pull Request URL
+
+        - name: Get Pull Request URL
           uses: kceb/pull-request-url-action@v1
           id: pr-url
+
         - run: echo "The Pull Request URL is ${{ steps.pr-url.outputs.url }}" >> diff-text.txt
         - name: iterate screenshot file
           run: |
@@ -88,11 +98,14 @@ jobs:
                   fi
                 fi
               done < pr-details-for-screenshot.txt
+
         - name: upload git diff to artifact
           uses: actions/upload-artifact@v2
           with:
             name: difftext
             path: diff-text.txt
+            retention-days: 3
+
         - name: Download the diff text artifact
           uses: actions/download-artifact@v2
           with:
@@ -124,6 +137,7 @@ jobs:
                 done < removed-changes.json
                 echo ",\"removed\"]]" >> construct-remove-array.txt
               fi
+
         - name: Set json array in git variable
           id: "json_array"
           run: |
@@ -151,6 +165,7 @@ jobs:
               JSON="[[\"No newly removed fields\", \"-\", \"-\", \"-\"]]"
               echo "GITHUB_REMOVED=$(echo $JSON)" >> $GITHUB_ENV
             fi
+
         - name: update s3 screenshot url to sheet
           id: 'update_s3_url_worksheet'
           uses: jroehl/gsheet.action@v1.0.0
