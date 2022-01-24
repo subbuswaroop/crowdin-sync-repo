@@ -158,7 +158,7 @@ jobs:
             spreadsheetId: 1XjECBS-qP78FSeU1q55oWNqch-94-YpUh2-naKzIfsw
             commands: | 
               [
-                { "command": "getWorksheet", "args": { "worksheetTitle": "new demo sheet" }},
+                { "command": "getWorksheet", "args": { "worksheetTitle": "Testing Sheet" }},
                 { "command": "appendData", "args": { "data": [["Key", "Value", "Action Type", "S3 url"]] , "minCol": 1}},
                 { "command": "appendData", "args": { "data": ${{ env.GITHUB_TESTING }} , "minCol": 1}},
                 { "command": "appendData", "args": { "data": ${{ env.GITHUB_REMOVED }} , "minCol": 1}}
