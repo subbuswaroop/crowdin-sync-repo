@@ -12,5 +12,9 @@
     "fd.lastone": "lastone",
     "fd.finalone": "finalone",
     "fd.testing": "Testin",
-    "fd.anoth_test": "another test"
+    "fd.anoth_test": "another test",
+    "fd.expand.collapse.more": "more",
+    "fd.about": "About",
+    "fd.showmore": "show more",
+    "fd.showless": "show less"
 }
