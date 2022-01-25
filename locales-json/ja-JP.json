@@ -1,7 +1,11 @@
 {
-    "fd.categories": "dată de începere",
-    "fd.helpdesk": "Helpdesk Edited",
+    "fd.categories": "Categories",
     "fd.tickets": "Tickets Edited",
-    "fd.onboarding.explore.dashboards.title": "Dashboards",
-    "fd.support-email.video.title": "Set up your support email"
+    "fd.onboarding.explore.dashboards.title": "ダッシュボードの編集",
+    "fd.support-email.video.title": "サポートメールを設定",
+    "fd.test": "Testing",
+    "fd.tesrtt": "tests",
+    "fd.filter": "Filters",
+    "form.update": "Update",
+    "fd.tax": "Tax"
 }
