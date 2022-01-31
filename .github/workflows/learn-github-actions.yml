@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: Learn S3 Upload using Roles
 on:
   workflow_dispatch:
 
