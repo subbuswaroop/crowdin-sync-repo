@@ -21,4 +21,4 @@ jobs:
 
       - name: Copy files to the test website with the AWS CLI
         run: |
-          aws s3 cp test_script.sh s3://github-action-screenshots
+          aws s3 cp .gitignore s3://github-action-screenshots
