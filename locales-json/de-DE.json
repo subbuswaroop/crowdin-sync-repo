@@ -1,11 +1,11 @@
 {
-    "fd.categories": "Categories",
-    "fd.tickets": "Tickets Edited",
+    "fd.categories": "Kategorien",
+    "fd.tickets": "Tickets bearbeitet",
     "fd.onboarding.explore.dashboards.title": "Dashboards Edited",
     "fd.support-email.video.title": "Set up your support email",
     "fd.test": "Testing",
     "fd.tesrtt": "tests",
     "fd.filter": "Filters",
     "form.update": "Update",
-    "fd.tax": "Tax"
+    "fd.tax": "Steuer"
 }

@@ -1,7 +1,11 @@
 {
-    "fd.categories": "categories",
-    "fd.helpdesk": "Helpdesk Edited",
-    "fd.tickets": "Tickets Edited",
-    "fd.onboarding.explore.dashboards.title": "Dashboards",
-    "fd.support-email.video.title": "Set up your support email"
+    "fd.categories": "Test Translation",
+    "fd.tickets": "Test Translation",
+    "fd.onboarding.explore.dashboards.title": "Test Translation",
+    "fd.support-email.video.title": "إعداد بريدك الإلكتروني للدعم",
+    "fd.test": "اختبار",
+    "fd.tesrtt": "الاختبارات",
+    "fd.filter": "فلاتر",
+    "form.update": "تحديث",
+    "fd.tax": "الضريبة"
 }
