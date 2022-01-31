@@ -21,4 +21,4 @@ jobs:
 
       - name: Copy files to the test website with the AWS CLI
         run: |
-          aws s3 sync ./another_test_file.js s3://github-action-screenshots
+          aws s3 sync /another_test_file.js s3://github-action-screenshots
