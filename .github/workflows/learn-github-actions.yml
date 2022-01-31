@@ -8,29 +8,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Configure AWS credentials from Test account
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          fetch-depth: 0
+          role-to-assume: arn:aws:iam::111111111111:role/my-github-actions-role-test
+          aws-region: us-east-1
 
-#       - name: Get changed files
-#         id: changed-files
-#         uses: tj-actions/changed-files@v10
-        
-      - name: Get Git top level
+      - name: Copy files to the test website with the AWS CLI
         run: |
-          git rev-parse --show-toplevel
-
-
-#       - name: crowdin action
-#         uses: crowdin/github-action@1.0.4
-#         with:
-#           upload_translations: true
-#           download_translations: false
-#           localization_branch_name: l10n_crowdin_action
-#           create_pull_request: true
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
-#           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
-          for file in "${{ steps.changed-files.outputs.all_modified_files }}"; do
-            echo "$file was modified"
-          done
+          aws s3 sync ./another_test_file.js s3://my-s3-test-website-bucket
