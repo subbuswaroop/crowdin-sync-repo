@@ -4,7 +4,7 @@ on:
 
 jobs:
   s3-upload-check:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux]
     # These permissions are needed to interact with GitHub's OIDC Token endpoint.
     permissions:
       id-token: write
@@ -19,6 +19,12 @@ jobs:
           role-to-assume: arn:aws:iam::163442318809:role/s3-access-oidc
           aws-region: us-east-1
 
+      - name: Install aws-cli
+        run : |
+          curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          sudo ./aws/install
+
       - name: Copy files to the test website with the AWS CLI
         run: |
-          aws s3 cp .gitignore s3://github-action-screenshots
+          aws s3 cp translations s3://github-action-screenshots
